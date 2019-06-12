@@ -1,0 +1,476 @@
+* {
+    box-sizing: border-box;
+}
+/*
+ <-- COLORS -->
+    #f26159; - redish
+    #191919; - gray
+    #fec00f; - yellow
+
+<-- DESKTOP VERSION REQUEST -->
+    desktop_example.html
+    https://stackoverflow.com/questions/21312707/show-full-site-button-to-bypass-css-media-queries
+
+*/
+
+
+/* FANCY BUTTON */
+.fancy-button, .fancy-button.full {
+    outline-style: none;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: Gill Sans MT, Gill Sans, My Gill Sans, sans-serif;
+    background-color: transparent;
+    border: solid black;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 0 30px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+
+    display: unset;
+
+}
+
+.fancy-button:hover, .fancy-button:active {
+    background-color: black;
+    color: #fec00f;
+}
+
+.unselectable {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -o-user-select: none;
+}
+
+/* BODY */
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* TURNS OFF SCROLLBAR EVERYWHERE */
+    overflow: hidden; 
+}
+
+.page-container, .page-container.full {
+    position: relative;
+    min-height: 100vh;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 0 180px 720px;
+    padding: 0;
+    margin: 0;
+    background-color: #191919;
+    zoom: 90%;
+}
+
+
+/* HEADER */
+.head-wrap, .head-wrap.full {
+    display: grid;
+    height: 120px;
+    grid-template-columns: repeat(12, 1fr);
+    background-color: #fec00f;
+
+    position: unset;
+    padding: 0;
+}
+
+.v-shape, .v-shape.full {
+    /* background */
+    background-image: url(img/minback-1.png);
+    background-repeat: no-repeat;
+    background-position: 0 -190px;
+    background-size: 100% 200%;
+    
+}
+
+.logo, .logo.full {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.logo-img {
+    width: 100px;
+}
+
+.logo-name {
+    align-self: center;
+    margin: 0 20px 10px 20px;
+    font-size: 67px;
+    font-family: 'Concert One', cursive;
+    color: #222222;
+}
+
+.navigation {
+    display: flex;
+    align-self: center;
+    height: 60%;
+    grid-column: auto / 13;
+}
+
+#menu-button, #mySidenav, #menu-button.full, #mySidenav.full, .closeSidenav, .closeSidenav.full {
+    display: none;
+}
+
+
+/* CONTENT */
+.container, .container.full {
+    display: grid;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 60px;
+    color: #fec00f;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100px 1fr;
+}
+
+.title, .title.full {
+    margin: 0;
+    text-align: center;
+    grid-column: 1 / 8;
+    grid-row: 2;
+    text-transform: uppercase;
+
+    font-size: unset;
+    justify-self: unset;
+}
+
+
+.hand-img, .hand-img.full {
+
+    height: 500px;
+    grid-column: 8 / 13;
+    grid-row: 2;
+
+    justify-self: unset;
+}
+
+
+.timer, .timer.full {
+    display: inline;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 100px;
+    color: black;
+    background-color: #fec00f;
+    border-radius: 10px;
+    padding: 0 10px 0 10px;
+}
+
+/* FOOTER */
+.credits {
+    display: grid;
+    position: absolute;
+    bottom: 0;
+    height: 1.2em;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #fec00f;
+    transition: height 0.5s;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.2em 1.2em 1.2em 1.2em 1.2em;
+    grid-template-areas: 
+        "inc inc inc inc"
+        ". panelsContainer panelsContainer ."
+        ". panelsContainer panelsContainer ."
+        ". panelsContainer panelsContainer ."
+        ". panelsContainer panelsContainer .";
+    /* grid-template-areas: 
+        "inc inc inc inc"
+        ". littleTitle1 littleTitle2 ."
+        ". details1 details2 ."
+        ". details1 details2 ."; */
+}
+.inc {
+    grid-area: inc;
+    margin: 0;
+    /* visibility: visible; */
+    /* opacity: 1; */
+    /* transition: 0.9s; */
+    transition: visibility 0s, opacity 0.5s linear;
+}
+.showDetails:visited {
+    color: #0000ee;
+}
+.panelsContainer {
+    grid-area: panelsContainer;
+    display: grid;
+    margin: 0;
+    overflow-y: hidden;
+    height: 0;
+    transition: 0.3s;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1.2em 1.2em 1.2em 1.2em 1.2em;
+    grid-template-areas: 
+        "panelContacts panelAddress"
+        "panelContacts panelAddress"
+        "panelContacts panelAddress"
+        "panelContacts panelAddress"
+        "panelContacts panelAddress";
+    
+}
+.panel.contacts {
+    display: grid;
+    grid-area: panelContacts;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.2em 1.2em 1.2em 1.2em 1.2em;
+    grid-template-areas:
+        "panelTitleContacts"
+        "panelTitleContacts"
+        "panelTextContacts"
+        "panelTextContacts"
+        "panelTextContacts";
+    
+}
+.panel.address {
+    display: grid;
+    grid-area: panelAddress;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.2em 1.2em 1.2em 1.2em 1.2em;
+    grid-template-areas:
+        "panelTitleAddress"
+        "panelTitleAddress"
+        "panelTextAddress"
+        "panelTextAddress"
+        "panelTextAddress";
+}
+.panelTitle {
+    align-self: center;
+    font-size: 1.4em;
+    font-weight: 500;
+    font-family: 'Concert One', cursive;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    overflow-y: hidden;
+}
+.panelTitle.contacts {
+    grid-area: panelTitleContacts;
+}
+.panelTitle.address {
+    grid-area: panelTitleAddress;
+    
+}
+.panelText {
+    align-self: center;
+    background-color: #191919;
+    color: white;
+    text-align: left;
+    padding: 0 8px 0 8px;
+    margin: 0 0 0 3px;
+    border-radius: 10px;
+    transition: 0.3s;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+p.panelText.address {}
+.panelText.contacts {
+    grid-area: panelTextContacts;
+}
+.panelText.address {
+    grid-area: panelTextAddress;
+}
+.closeCredits {
+    position: fixed;
+    bottom: 6.8em;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (max-width: 1025px) {
+
+    .head-wrap {
+        position: fixed;
+        grid-template-columns: 120px 350px repeat(10, 1fr);
+        padding: 0 100% 0 0;
+    }
+
+    .v-shape {
+        background-image: unset;
+    }
+
+    .page-container {
+        grid-template-rows: 0 120px 1fr;
+        zoom: 60%;
+    }
+
+    .logo {
+        margin-left: 15px;
+    }
+
+    #menu-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: 0;
+        background-color: #fec00f;
+        border: none;
+        font-size: 70px;
+        content: "\f0c9";
+        height: 120px
+    }
+
+    #menu-button:active {
+        filter: brightness(85%);
+    }
+
+    .container {
+        grid-template-rows: 50px 700px;
+    }
+
+    .fancy-button {
+        display: none;
+    }
+
+    .title {
+        justify-self: center;
+        font-size: 80px;
+        grid-column: 3 / 11;
+    }
+
+    .timer {
+        font-size: 135px;
+    }
+
+    .hand-img {
+        justify-self: center;
+        height: 800px;
+        grid-column: 3 / 11;
+        grid-row: 3;
+    }
+
+    .credits {
+        font-size: 2.4em;
+    }
+    .panel.contacts {
+        margin: 0 0.25em 0 0.5em;
+    }
+    .panel.address {
+        margin: 0 0.5em 0 0.25em;
+    }
+
+
+    /* SIDEBAR */
+    .sidenav {
+        height: 100%; /* 100% Full-height */
+        width: 0; /* 0 width - change this with JavaScript */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Stay on top */
+        top: 0; /* Stay at the top */
+        left: 0;
+        background-color: #111; /* Black*/
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 168px; /* Place content 60px from the top */
+        transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    }
+    /* The navigation menu links */
+    .sidenav a:not(:last-child) {
+        padding: 22px 22px 22px 90px;
+        text-decoration: none;
+        font-size: 70px;
+        color: #fec00f;
+        display: block;
+        transition: 0.3s;
+        font-family: Calibri, 'Trebuchet MS', sans-serif;
+    }
+    /* When you mouse over the navigation links, change their color */
+    .sidenav a:not(:last-child):hover {
+        color: #f1f1f1;
+        background-color: #222222;
+    }
+    .sidenav a:not(:last-child):active {
+        background-color: #222222;
+    }
+    .closebtn.closebtn:active {
+        background-color: unset;
+    }
+    .desktop {
+        display: block;
+        position: absolute;
+        bottom: 200px;
+        left: 25%;
+        color: #333333;
+        font-size: 45px;
+        /* forbids text to go on next line */
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 70px;
+        font-size: 100px;
+        margin-left: 140px;
+    }
+    /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+    #main {
+        transition: margin-left .5s;
+        padding: 56px;
+    }
+    #mySidenav {
+        display: block;
+    }
+    @media screen and (max-height: 450px) {
+        /* .sidenav {padding-top: 40px;} */
+        .sidenav a {font-size: 50px;}
+    }
+
+    .closeSidenav {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+    }
+    @media screen and (max-width: 800px)  {
+        .page-container {
+            zoom: 50%;
+        }
+        @media screen and (max-width: 600px) {
+            .page-container {
+                zoom: 35%;
+            }
+            .credits {
+                font-size: 2.3em;
+            }
+            @media screen and (max-width: 400px) {
+                .page-container {
+                    zoom: 30%;
+                }
+                .credits {
+                    font-size: 3em;
+                }
+                @media screen and (max-width: 325px) {
+                    .page-container {
+                        zoom: 25%;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-height: 800px) {
+    
+    }
+
+}
+
+
+/* TODO's:
+  1) Fix broken hitbox of .closebtn
+✓ 2) Add "View desktop" version
+  3) Add "View mobile" version
+✓ 4) Make tap on background close sidebar
+  5) Javascript backend
+    a) Log In / Register
+    b) Cookies
+    c) Datebase
+*/
