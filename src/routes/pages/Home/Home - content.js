@@ -7,8 +7,8 @@ export default class Content extends React.Component {
         this.state = {time: "00:00:00"}
     }
     componentWillUnmount() {
-        console.log("UNMOUNTINGs");
-        clearInterval(this.renderTime)
+        console.log("UNMOUNTING");
+        clearInterval(int1)
     }
     
     renderTime() {
@@ -23,7 +23,7 @@ export default class Content extends React.Component {
     }
 
     render() {
-        setInterval(this.renderTime, 1000)
+        const int1 = setInterval(this.renderTime, 1000)
         return (
             <section className="container">
                 <h6 className="title">
