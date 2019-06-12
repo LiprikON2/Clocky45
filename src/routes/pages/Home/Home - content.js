@@ -6,6 +6,9 @@ export default class Content extends React.Component {
         this.renderTime = this.renderTime.bind(this)
         this.state = {time: "00:00:00"}
     }
+    componentWillUnmount() {
+        clearInterval(this.renderTime)
+    }
     
     renderTime() {
         const now = new Date()
