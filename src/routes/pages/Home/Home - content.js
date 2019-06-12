@@ -8,7 +8,7 @@ export default class Content extends React.Component {
     }
     componentWillUnmount() {
         console.log("UNMOUNTINGs");
-        clearInterval(renderTime)
+        clearInterval(this.renderTime)
     }
     
     renderTime() {
