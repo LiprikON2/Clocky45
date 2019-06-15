@@ -124,7 +124,7 @@ export default class Content extends React.Component {
                         </ul>
                     </div>
                 </div>
-                <div className="closeCredits" onMouseOver={this.closeCredits} style={{display: "none"}}></div>
+                <div className="closeCredits" onMouseOver={this.closeCredits} onClick={this.closeCredits} style={{display: "none"}}></div>
             </footer>
         )
     }

@@ -28,14 +28,19 @@
     cursor: pointer;
     text-decoration: none;
     color: black;
+    transition: background 0.1s 0.05s, color 0.1s 0.05s, transform 0.05s;
 
     display: unset;
 
 }
 
-.fancy-button:hover, .fancy-button:active {
+.fancy-button:hover {
     background-color: black;
     color: #fec00f;
+}
+.fancy-button:active {
+    transform: scale(0.9)
+
 }
 
 .unselectable {
@@ -92,6 +97,7 @@ html, body, #root {
     display: flex;
     align-items: center;
     margin-left: 40px;
+    text-decoration: none;
 }
 
 .logo-img {

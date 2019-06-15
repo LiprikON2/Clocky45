@@ -1,30 +1,33 @@
 import React from 'react'
 
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
  
 const openNav = () => {
     document.getElementById("mySidenav").style.width = "700px"
     document.querySelector(".closeSidenav").style.display = "unset"
 }
 
-export default class Header extends React.Component {
-
+class Header extends React.Component {
+    
     render() {
+        const path = this.props.location.pathname
+        const acitveStyle = {backgroundColor: "black", color: "#fec00f"}
         return (
             <div className="v-shape">
                 <header className="head-wrap">
                     <button id="menu-button" className="fas fa-bars" onClick={openNav}></button>
-                    <div className="logo">
+                    <Link to="/" className="logo">
                         <img className="logo-img unselectable" src="css/img/clock.svg" alt="clock logo"/>
                         <div className="logo-name unselectable">Clocky</div>
-                    </div>
+                    </Link>
                     <nav className="navigation">
-                        <Link to="/" className="fancy-button unselectable">Home</Link>
-                        <Link to="/Main" className="fancy-button unselectable">Main</Link>
-                        <Link to="/About" className="fancy-button unselectable">About</Link>
+                        <Link to="/" className="fancy-button unselectable" style={path === "/" ? acitveStyle : null}>Home</Link>
+                        <Link to="/Main" className="fancy-button unselectable" style={path === "/Main" ? acitveStyle : null}>Main</Link>
+                        <Link to="/About" className="fancy-button unselectable" style={path === "/About" ? acitveStyle : null}>About</Link>
                     </nav>
                 </header>
             </div>
         )
     }
 }
+export default withRouter(Header)

@@ -5,14 +5,15 @@ import Header from '../../components/Header'
 import Content from './Home - content'
 import Footer from '../../components/Footer'
 
-const Home = () => (
+const Home = () => {
+    return (
     <div className="page-container">
         <Sidebar />
         <Header />
         <Content />
         <Footer />
     </div>
-)
+)}
 
 
 export default Home
