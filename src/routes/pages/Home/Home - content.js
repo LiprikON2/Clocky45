@@ -6,11 +6,12 @@ export default class Content extends React.Component {
         this.renderTime = this.renderTime.bind(this)
         this.state = {time: "00:00:00"}
     }
-    componentWillUnmount() {
-        console.log("UNMOUNTING");
-        clearInterval(int1)
+    componentDidMount() {
+        this.time = setInterval(this.renderTime, 1000)
     }
-    
+    componentWillUnmount() {
+        clearInterval(this.time)
+    }
     renderTime() {
         const now = new Date()
 
@@ -18,12 +19,10 @@ export default class Content extends React.Component {
         const hour = ("0" +now.getHours()).slice(-2)
         const minute = ("0" +now.getMinutes()).slice(-2)
         const second = ("0" +now.getSeconds()).slice(-2)
-
+        
         this.setState({time: `${hour}:${minute}:${second}`})
     }
-
     render() {
-        const int1 = setInterval(this.renderTime, 1000)
         return (
             <section className="container">
                 <h6 className="title">

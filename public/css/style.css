@@ -264,12 +264,12 @@ html, body, #root {
     padding: 0 8px 0 8px;
     margin: 0 0 0 3px;
     border-radius: 10px;
+    list-style: none;
     transition: 0.3s;
     overflow-y: hidden;
     white-space: nowrap;
 }
 
-p.panelText.address {}
 .panelText.contacts {
     grid-area: panelTextContacts;
 }
