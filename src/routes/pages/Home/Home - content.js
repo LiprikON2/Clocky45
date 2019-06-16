@@ -25,7 +25,7 @@ export default class Content extends React.Component {
     render() {
         return (
             <section className="container">
-                <h6 className="title">
+                <h6 className="title fancy">
                     <p>The Fanciest Clock in the Universe!</p>
                         <div className="timer">{this.state.time}</div>
                     <br/>

@@ -65,7 +65,7 @@ html, body, #root {
     min-height: 100vh;
     height: 100%;
     display: grid;
-    grid-template-rows: 0 180px 1fr 1.5em;
+    grid-template-rows: 0 180px calc(100% - 180px - 1.5em) 1.5em;
     padding: 0;
     margin: 0;
     background-color: #191919;
@@ -131,10 +131,15 @@ html, body, #root {
     font-size: 60px;
     color: #fec00f;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 100px 1fr; /*100px 1fr*/
+    grid-template-rows: repeat(6, 1fr);
+    /* grid-template-areas: 
+        '. . . . . .'
+        '. . . . . .'
+        '. . . . . .'
+        '. . . . . .' */
 }
 
-.title, .title.full {
+.title.fancy, .title.fancy.full {
     margin: 0;
     text-align: center;
     grid-column: 1 / 8;
@@ -166,6 +171,23 @@ html, body, #root {
     padding: 0 10px 0 10px;
 }
 
+.title.big.er404 {
+    font-size: 180px;
+    margin: 0 5% 0 0;
+    align-self: center;
+    justify-self: end;
+    grid-column: 3 / 6;
+    grid-row: 2 / 4;
+
+}
+.title.er404 {
+    font-size: 60px;
+    margin: 0 0 0 5%;
+    align-self: center;
+    justify-self: start;
+    grid-column: 6 / 11;
+    grid-row: 2 / 4;
+}
 /* FOOTER */
 .credits {
     display: grid;
@@ -187,18 +209,10 @@ html, body, #root {
         ". panelsContainer panelsContainer ."
         ". panelsContainer panelsContainer ."
         ". panelsContainer panelsContainer .";
-    /* grid-template-areas: 
-        "inc inc inc inc"
-        ". littleTitle1 littleTitle2 ."
-        ". details1 details2 ."
-        ". details1 details2 ."; */
 }
 .inc {
     grid-area: inc;
     margin: 0;
-    /* visibility: visible; */
-    /* opacity: 1; */
-    /* transition: 0.9s; */
     transition: visibility 0s, opacity 0.5s linear;
 }
 .showDetails:visited {
@@ -303,7 +317,7 @@ html, body, #root {
     }
 
     .page-container {
-        grid-template-rows: 0 120px 1fr 2.8em;
+        grid-template-rows: 0 120px calc(100% - 120px - 2.8em) 2.8em;
         zoom: 60%;
     }
 
@@ -328,14 +342,14 @@ html, body, #root {
     }
 
     .container {
-        grid-template-rows: 50px 700px;
+        grid-template-rows: repeat(6, 1fr);
     }
 
     .fancy-button {
         display: none;
     }
 
-    .title {
+    .title.fancy {
         justify-self: center;
         font-size: 80px;
         grid-column: 3 / 11;
@@ -349,7 +363,16 @@ html, body, #root {
         justify-self: center;
         height: 800px;
         grid-column: 3 / 11;
-        grid-row: 3;
+        grid-row: 4;
+    }
+
+    .title.big.er404 {
+        font-size: 240px;
+        grid-column: 4 / 6;
+    }
+    .title.er404 {
+        font-size: 80px;
+        grid-column: 6 / 13;
     }
 
     .credits {
