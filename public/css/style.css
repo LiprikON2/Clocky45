@@ -65,7 +65,7 @@ html, body, #root {
     min-height: 100vh;
     height: 100%;
     display: grid;
-    grid-template-rows: 0 180px 720px;
+    grid-template-rows: 0 180px 1fr 1.5em;
     padding: 0;
     margin: 0;
     background-color: #191919;
@@ -131,7 +131,7 @@ html, body, #root {
     font-size: 60px;
     color: #fec00f;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 100px 1fr;
+    grid-template-rows: 100px 1fr; /*100px 1fr*/
 }
 
 .title, .title.full {
@@ -179,8 +179,8 @@ html, body, #root {
     background-color: #fec00f;
     transition: height 0.5s;
 
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1.2em 1.2em 1.2em 1.2em 1.2em;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1.2em);
     grid-template-areas: 
         "inc inc inc inc"
         ". panelsContainer panelsContainer ."
@@ -212,7 +212,7 @@ html, body, #root {
     height: 0;
     transition: 0.3s;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1.2em 1.2em 1.2em 1.2em 1.2em;
+    grid-template-rows: repeat(5, 1.2em);
     grid-template-areas: 
         "panelContacts panelAddress"
         "panelContacts panelAddress"
@@ -225,7 +225,7 @@ html, body, #root {
     display: grid;
     grid-area: panelContacts;
     grid-template-columns: 1fr;
-    grid-template-rows: 1.2em 1.2em 1.2em 1.2em 1.2em;
+    grid-template-rows: repeat(5, 1.2em);
     grid-template-areas:
         "panelTitleContacts"
         "panelTitleContacts"
@@ -238,7 +238,7 @@ html, body, #root {
     display: grid;
     grid-area: panelAddress;
     grid-template-columns: 1fr;
-    grid-template-rows: 1.2em 1.2em 1.2em 1.2em 1.2em;
+    grid-template-rows: repeat(5, 1.2em) ;
     grid-template-areas:
         "panelTitleAddress"
         "panelTitleAddress"
@@ -303,7 +303,7 @@ html, body, #root {
     }
 
     .page-container {
-        grid-template-rows: 0 120px 1fr;
+        grid-template-rows: 0 120px 1fr 2.8em;
         zoom: 60%;
     }
 
