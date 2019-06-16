@@ -21,9 +21,9 @@ class Header extends React.Component {
                         <div className="logo-name unselectable">Clocky</div>
                     </Link>
                     <nav className="navigation">
-                        <Link to="/" className="fancy-button unselectable" style={path === "/" ? acitveStyle : null}>Home</Link>
-                        <Link to="/Main" className="fancy-button unselectable" style={path === "/Main" ? acitveStyle : null}>Main</Link>
-                        <Link to="/About" className="fancy-button unselectable" style={path === "/About" ? acitveStyle : null}>About</Link>
+                        <Link to="/" className="button topNav unselectable" style={path === "/" ? acitveStyle : null}>Home</Link>
+                        <Link to="/Main" className="button topNav unselectable" style={path === "/Main" ? acitveStyle : null}>Main</Link>
+                        <Link to="/About" className="button topNav unselectable" style={path === "/About" ? acitveStyle : null}>About</Link>
                     </nav>
                 </header>
             </div>

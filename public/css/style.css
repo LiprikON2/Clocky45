@@ -14,8 +14,8 @@
 */
 
 
-/* FANCY BUTTON */
-.fancy-button, .fancy-button.full {
+/* TOPNAV BUTTON */
+.button, .button.full {
     outline-style: none;
     font-size: 40px;
     text-transform: uppercase;
@@ -29,18 +29,38 @@
     text-decoration: none;
     color: black;
     transition: background 0.1s 0.05s, color 0.1s 0.05s, transform 0.05s;
+    white-space: nowrap;
+    overflow: hidden;
 
     display: unset;
 
 }
 
-.fancy-button:hover {
+.button:hover {
     background-color: black;
     color: #fec00f;
 }
-.fancy-button:active {
+.button:active {
     transform: scale(0.9)
+}
 
+/* BACK BUTTON */
+.button.back {
+    width: 80%;
+    height: 80%;
+    font-size: 50px;
+    color: #fec00f;
+    border: solid #fec00f;
+    grid-column: 5 / 9;
+    grid-row: 4 / 5;
+}
+
+.button:hover {
+    background-color: #fec00f;
+    color: black;
+}
+.fas.fa-chevron-circle-left  {
+    padding-right: 2%;
 }
 
 .unselectable {
@@ -131,16 +151,11 @@ html, body, #root {
     font-size: 60px;
     color: #fec00f;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    /* grid-template-areas: 
-        '. . . . . .'
-        '. . . . . .'
-        '. . . . . .'
-        '. . . . . .' */
+    grid-template-rows: repeat(6, 1fr);  
 }
 
 .title.fancy, .title.fancy.full {
-    margin: 0;
+    margin: 5%;
     text-align: center;
     grid-column: 1 / 8;
     grid-row: 2;
@@ -152,7 +167,6 @@ html, body, #root {
 
 
 .hand-img, .hand-img.full {
-
     height: 500px;
     grid-column: 8 / 13;
     grid-row: 2;
@@ -188,6 +202,7 @@ html, body, #root {
     grid-column: 6 / 11;
     grid-row: 2 / 4;
 }
+
 /* FOOTER */
 .credits {
     display: grid;
@@ -200,7 +215,6 @@ html, body, #root {
     font-family: Calibri, 'Trebuchet MS', sans-serif;
     background-color: #fec00f;
     transition: height 0.5s;
-
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1.2em);
     grid-template-areas: 
@@ -233,7 +247,6 @@ html, body, #root {
         "panelContacts panelAddress"
         "panelContacts panelAddress"
         "panelContacts panelAddress";
-    
 }
 .panel.contacts {
     display: grid;
@@ -246,7 +259,6 @@ html, body, #root {
         "panelTextContacts"
         "panelTextContacts"
         "panelTextContacts";
-    
 }
 .panel.address {
     display: grid;
@@ -345,7 +357,7 @@ html, body, #root {
         grid-template-rows: repeat(6, 1fr);
     }
 
-    .fancy-button {
+    .button.topNav {
         display: none;
     }
 
@@ -372,7 +384,7 @@ html, body, #root {
     }
     .title.er404 {
         font-size: 80px;
-        grid-column: 6 / 13;
+        grid-column: 6 / 12;
     }
 
     .credits {

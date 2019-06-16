@@ -5,7 +5,7 @@ import Header from '../../components/Header'
 import Content from './404 - content'
 import Footer from '../../components/Footer'
 
-const Main = () => (
+const page404 = () => (
     <div className="page-container">
         <Sidebar />
         <Header />
@@ -15,4 +15,4 @@ const Main = () => (
 )
 
 
-export default Main
+export default page404

@@ -5,7 +5,7 @@ import Header from '../../components/Header'
 import Content from './About - content'
 import Footer from '../../components/Footer'
 
-const Main = () => (
+const About = () => (
     <div className="page-container">
         <Sidebar />
         <Header />
@@ -15,4 +15,4 @@ const Main = () => (
 )
 
 
-export default Main
+export default About
