@@ -51,8 +51,10 @@
     font-size: 50px;
     color: #fec00f;
     border: solid #fec00f;
-    grid-column: 5 / 9;
-    grid-row: 4 / 5;
+    margin-left: 35px;
+    grid-column: 6 / 10;
+    /* grid-row: 4 / 5; */
+    grid-row: 3;
 }
 
 .button.back:hover {
@@ -168,9 +170,9 @@ html, body, #root {
 
 .hand-img, .hand-img.full {
     height: 500px;
+    margin-top: 40px;
     grid-column: 8 / 13;
     grid-row: 2;
-
     justify-self: unset;
 }
 
@@ -186,12 +188,15 @@ html, body, #root {
 }
 
 .title.big.er404 {
-    font-size: 180px;
+    font-size: 280px; /* 180px*/
     margin: 0 5% 0 0;
-    align-self: center;
+    /* padding-bottom: 50px; */
+    margin-bottom: 95px;
+    /* align-self: stretch; */
     justify-self: end;
     grid-column: 3 / 6;
-    grid-row: 2 / 4;
+    /* grid-row: 2 / 4;  */
+    grid-row: 2 / 4; 
 
 }
 .title.er404 {
@@ -200,7 +205,8 @@ html, body, #root {
     align-self: center;
     justify-self: start;
     grid-column: 6 / 11;
-    grid-row: 2 / 4;
+    /* grid-row: 2 / 4; */
+    grid-row: 2 / 2; 
 }
 
 .WIP {
