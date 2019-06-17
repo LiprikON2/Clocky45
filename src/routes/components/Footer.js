@@ -25,12 +25,6 @@ export default class Content extends React.Component {
     openCredits = () => {
         document.querySelector('.credits').style.height = "6.8em"
         document.querySelector('.panelsContainer').style.height = "6.8em"
-        // document.querySelector('.panelText.address').style.height = "3.6em"
-        // document.querySelector('.inc').style.visibility = "hidden"
-        // document.querySelector('.inc').style.opacity = "0"
-
-        // document.querySelector('.littleTitle1').style.transform = "translateY(-1.2em)"
-
         document.querySelector('.inc').style.display = "none"
         document.querySelector('.closeCredits').style.display = "unset"
 
@@ -42,12 +36,6 @@ export default class Content extends React.Component {
     closeCredits = () => {
         document.querySelector('.credits').style.height = "1.2em"
         document.querySelector('.panelsContainer').style.height = "0"
-        // document.querySelector('.panelText.address').style.height = "0"
-        // document.querySelector('.inc').style.visibility = "visible"
-        // document.querySelector('.inc').style.opacity = "1"
-
-        // document.querySelector('.littleTitle1').style.transform = "translateY(-1.2em)"
-
         document.querySelector('.inc').style.display = "unset"
         document.querySelector('.closeCredits').style.display = "none"
 

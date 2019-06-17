@@ -15,7 +15,8 @@ export default class Content extends React.Component {
         return (
             <div className="sidebar">
                 <div id="mySidenav" className="sidenav">
-                    <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>&times;</a>
+                    {/* <a href="javascript:void(0)" className="closebtn" onClick={closeNav}><i className="sidenavCross">&times;</i></a> */}
+                    <i className="closebtn unselectable" onClick={closeNav}>&times;</i>
                     <Link to="/" href="#">Home</Link>
                     <Link to="/Main" href="#">Main</Link>
                     <Link to="/About" href="#">About</Link>
