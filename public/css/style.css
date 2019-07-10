@@ -209,7 +209,8 @@ html, body, #root {
 }
 
 .button.back:active {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.25);
+    background-color: #fec00f;
+    color: black;
 }
 
 .fas.fa-chevron-circle-left  {
