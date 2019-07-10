@@ -33,7 +33,6 @@
     overflow: hidden;
 
     display: unset;
-
 }
 
 .button.topNav:hover {
@@ -44,26 +43,7 @@
     transform: scale(0.9)
 }
 
-/* BACK BUTTON */
-.button.back {
-    width: 400px;
-    height: 100px;
-    font-size: 50px;
-    color: #fec00f;
-    border: solid #fec00f;
-    margin-left: 35px;
-    grid-column: 6 / 10;
-    /* grid-row: 4 / 5; */
-    grid-row: 3;
-}
 
-.button.back:hover {
-    background-color: #fec00f;
-    color: black;
-}
-.fas.fa-chevron-circle-left  {
-    padding-right: 2%;
-}
 
 .unselectable {
     -moz-user-select: none;
@@ -112,7 +92,6 @@ html, body, #root {
     background-repeat: no-repeat;
     background-position: 0 -190px;
     background-size: 100% 200%;
-    
 }
 
 .logo, .logo.full {
@@ -189,26 +168,47 @@ html, body, #root {
     padding: 0 10px 0 10px;
 }
 
-.title.big.er404 {
-    font-size: 280px; /* 180px*/
-    margin: 0 5% 0 0;
-    /* padding-bottom: 50px; */
-    margin-bottom: 95px;
-    /* align-self: stretch; */
+/* EROR 404 */
+.er404.holder {
+    display: grid;
+    grid-column: 2 / -2;
+    grid-row:  2 / -3;
+    grid-template-areas: 
+        "er404 text"
+        "er404 back";
+}
+.er404.big.text {
     justify-self: end;
-    grid-column: 3 / 6;
-    /* grid-row: 2 / 4;  */
-    grid-row: 2 / 4; 
+    align-self: center;
+    margin: 0 30px 85px 0;
+    height: 300px;
+    grid-area: er404;
+    font-size: 300px;
 
 }
-.title.er404 {
-    font-size: 60px;
-    margin: 0 0 0 5%;
-    align-self: center;
-    justify-self: start;
-    grid-column: 6 / 11;
-    /* grid-row: 2 / 4; */
-    grid-row: 2 / 2; 
+.er404.text {
+    margin: 0;
+    grid-area: text;
+    font-size: 50px;
+    align-self: end;
+
+}
+/* BACK BUTTON */
+.button.back {
+    grid-area: back;
+    width: 333px;
+    height: 80px;
+    font-size: 40px;
+    color: #fec00f;
+    border: solid #fec00f;
+}
+
+.button.back:hover {
+    background-color: #fec00f;
+    color: black;
+}
+.fas.fa-chevron-circle-left  {
+    padding-right: 2%;
 }
 
 .WIP {
@@ -398,20 +398,6 @@ html, body, #root {
         height: 800px;        
         grid-column: 2 / -2;
         grid-row: 6 / -1;
-    }
-
-    .title.big.er404 {
-        font-size: 240px;
-        grid-column: 4 / 6;
-    }
-    .title.er404 {
-        font-size: 80px;
-        grid-column: 6 / 12;
-    }
-    .button.back {
-        width: 600px;
-        height: 150px;
-        font-size: 75px;
     }
 
     /* FOOTER MOBILE */
