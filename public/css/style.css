@@ -331,6 +331,8 @@ html, body, #root {
     right: 0;
     height: 100%;
     width: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
 }
 @media screen and (max-width: 1025px) and (orientation: portrait), screen and (max-height: 769px) and (orientation: landscape) {
 
