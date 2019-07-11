@@ -447,6 +447,9 @@ html, body, #root {
         align-self: center;
     
     }
+    .er404 br {
+        display: none;
+    }
     /* BACK BUTTON */
     .button.back {
         width: 550px;
