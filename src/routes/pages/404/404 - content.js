@@ -12,7 +12,7 @@ class Content extends React.Component {
             <section className="container">
                 <div className="er404 holder">
                     <h1 className="er404 big text">404</h1>
-                    <h4 className="er404 text">We couldn't find <br/> this page.</h4>
+                    <h4 className="er404 text">We couldn't find <pbr/> this page.</h4>
                     <button className="er404 button back unselectable"onClick={this.goBack}><i class="fas fa-chevron-circle-left"/> GO BACK</button>
                 </div>
             </section>
