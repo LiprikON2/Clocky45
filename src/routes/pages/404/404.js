@@ -14,5 +14,4 @@ const page404 = () => (
     </div>
 )
 
-
 export default page404
