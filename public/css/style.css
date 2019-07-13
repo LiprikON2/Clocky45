@@ -670,7 +670,7 @@ html, body, #root {
             grid-column: 7 / -2;
             grid-row: 2 / -2;
             margin: 0;
-            height: 650px;
+            height: 800px;
         }
         .timer {
             font-size: 120px; /* -15px compared to portrait*/
@@ -709,7 +709,7 @@ html, body, #root {
             .page-container {
                 zoom: 40%;
             }
-    
+        }
         @media screen and (max-width: 600px), screen and (max-height: 550px) and (orientation: landscape) {
             .page-container {
                 zoom: 35%;
