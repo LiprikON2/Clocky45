@@ -98,9 +98,9 @@ export default class Content extends React.Component {
                     <div className="panel contacts">
                         <h4 className="panelTitle contacts">Contacts</h4>
                         <ul className="panelText contacts">
-                            <li>Phone: 732-365-5505</li>
-                            <li>Fax:   732-365-2313</li>
-                            <li>Email: office@clocky45.com</li>
+                            <li>Phone: <span>732-365-5505</span></li>
+                            <li>Fax:   <span>732-365-2313</span></li>
+                            <li>Email: <span>office@clocky45.com</span></li>
                         </ul>
                     </div>
                     <div className="panel address">

@@ -96,7 +96,7 @@
     background-color: transparent;
     border: solid black;
     border-radius: 10px;
-    margin: 10px;
+    margin: 10px 0 10px 0;
     padding: 0 30px;
     cursor: pointer;
     text-decoration: none;
@@ -104,6 +104,9 @@
     transition: background 0.1s 0.05s, color 0.1s 0.05s, transform 0.05s;
     white-space: nowrap;
     overflow: hidden;
+    /*FIREFOX ZOOM FIX*/
+    transform: scale(0.9);
+    /* transform-origin: center right;  */
 
     display: unset;
 }
@@ -113,12 +116,12 @@
     color: #fec00f;
 }
 .button:active {
-    transform: scale(0.9)
+    transform: scale(0.81);
 }
 
 
 
-.unselectable.unselectable.unselectable.unselectable.unselectable {
+.unselectable {
     -webkit-user-select:none;
     -khtml-user-select:none;
     -moz-user-select:none;
@@ -126,6 +129,14 @@
     -o-user-select:none;
     user-select:none;
 }
+li span {
+    -webkit-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all;
+    -o-user-select: all;
+    user-select: all;
+}
+
 
 /* BODY */
 html, body, #root {
@@ -133,7 +144,7 @@ html, body, #root {
     margin: 0;
     padding: 0;
     /* TURNS OFF SCROLLBAR EVERYWHERE */
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .page-container, .page-container.full {
@@ -141,23 +152,23 @@ html, body, #root {
     min-height: 100vh;
     height: 100%;
     display: grid;
-    grid-template-rows: 0 180px calc(100% - 180px - 1.5em) 1.5em;
+    grid-template-rows: 0 162px calc(100% - 162px - 1.5em) 1.5em;
     padding: 0;
     margin: 0;
-    background-color: #191919;
-    zoom: 90%;
+    background-color: #191919;        
 }
 
 
 /* HEADER */
 .head-wrap, .head-wrap.full {
     display: grid;
-    height: 120px;
+    height: 108px;
     grid-template-columns: repeat(12, 1fr);
     background-color: #fec00f;
 
     position: unset;
     padding: 0;
+    
 }
 
 .v-shape, .v-shape.full {
@@ -165,40 +176,44 @@ html, body, #root {
     background-image: url(img/minback-1.png);
     background-repeat: no-repeat;
     background-position: 0 -190px;
-    background-size: 100% 200%;
+    background-size: 100% 215%;
 }
 
 .logo, .logo.full {
     display: flex;
     align-items: center;
-    margin-left: 40px;
+    margin-left: 36px;
     text-decoration: none;
 }
 
 .logo-img {
     width: 100px;
+    /*FIREFOX ZOOM FIX*/
+    transform: scale(0.9);
+    transform-origin: center left;  
 }
 
 .logo-name {
     align-self: center;
-    margin: 0 20px 10px 20px;
+    margin: 0 24px 7px 9px;
     font-size: 67px;
     font-family: 'Concert One', cursive;
     color: #222222;
+    /*FIREFOX ZOOM FIX*/
+    transform: scale(0.9);
+    transform-origin: center left;  
 }
 
 .navigation {
     display: flex;
     align-self: center;
-    height: 60%;
+    height: 66%;
     grid-column: auto / 13;
 }
 
 #menu-button, #mySidenav, #menu-button.full, #mySidenav.full, .closeSidenav, .closeSidenav.full {
     display: none;
 }
-
-
 /* CONTENT */
 .container, .container.full {
     display: grid;
@@ -210,21 +225,19 @@ html, body, #root {
 }
 
 .title.fancy, .title.fancy.full {
-    /* margin: 5%;  delete this too1!!!!*/
     margin: 0; 
     text-align: center;
     grid-column: 1 / 8;
     grid-row: 2 / -2;
     text-transform: uppercase;
+    font-size: 54px;
 
-    font-size: unset;
     justify-self: unset;
 }
 
 
 .hand-img, .hand-img.full {
-    height: 500px;
-    /* margin-top: 40px; DELETE THIS!!!!! */
+    height: 450px;
     margin: 0; 
     grid-column: 8 / 13;
     grid-row: 2 / -2;
@@ -235,7 +248,7 @@ html, body, #root {
 .timer, .timer.full {
     display: inline;
     font-family: Calibri, sans-serif;
-    font-size: 100px;
+    font-size: 90px;
     color: black;
     background-color: #fec00f;
     border-radius: 10px;
@@ -299,7 +312,7 @@ html, body, #root {
 .WIP {
     align-self: center;
     justify-self: center;
-    height: 300px;
+    height: 270px;
 
     grid-column: 3 / -3;
     grid-row: 2 / -3;
@@ -427,10 +440,13 @@ html, body, #root {
         position: fixed;
         grid-template-columns: 120px 350px repeat(10, 1fr);
         padding: 0 100% 0 0;
+        /*FIREFOX*/
+        height: 120px;
     }
 
     .v-shape {
         background-image: unset;
+        
     }
 
     .page-container {
@@ -441,7 +457,16 @@ html, body, #root {
     .logo {
         margin-left: 15px;
     }
+    .logo-img {
+        transform: unset;
+    }
 
+    .logo-name {
+        /*FIREFOX*/
+        margin: 0 20px 10px 20px;
+        transform: unset;
+    }
+    
     #menu-button {
         display: flex;
         align-items: center;
@@ -618,7 +643,9 @@ html, body, #root {
         height: 140px;
         padding-top: 15px;
     }
-
+    .WIP {
+        height: 320px;
+    }
     @media screen and (orientation: landscape) {
         .container {
             grid-template-rows: repeat(8, 1fr);
