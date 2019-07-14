@@ -1,9 +1,16 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom'
-import Home from './routes/pages/Home/Home'
-import Main from './routes/pages/Main/Main'
-import About from './routes/pages/About/About'
-import page404 from './routes/pages/404/404'
+
+//Components
+import Sidebar from "./routes/components/Sidebar"
+import Header from './routes/components/Header'
+import Footer from './routes/components/Footer'
+
+//Pages
+import HomeContent from './routes/pages/HomeContent'
+import MainContent from './routes/pages/MainContent'
+import AboutContent from './routes/pages/AboutContent'
+import Er404Content from './routes/pages/Er404Content'
 
 
 export default class App extends React.Component {
@@ -11,10 +18,41 @@ export default class App extends React.Component {
     render() {
         return (
             <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/Main" component={Main} />
-                <Route exact path="/About" component={About} />
-                <Route path="/" component={page404} />
+                <Route exact path="/">
+                    <div className="page-container">
+                        <Sidebar />
+                        <Header />
+                        <HomeContent />
+                        <Footer />
+                    </div>
+                </Route>
+
+                <Route exact path="/Main">
+                    <div className="page-container">
+                        <Sidebar />
+                        <Header />
+                        <MainContent />
+                        <Footer />
+                    </div>
+                </Route>
+
+                <Route exact path="/About">
+                    <div className="page-container">
+                        <Sidebar />
+                        <Header />
+                        <AboutContent />
+                        <Footer />
+                    </div>
+                </Route>
+
+                <Route path="/">
+                    <div className="page-container">
+                        <Sidebar />
+                        <Header />
+                        <Er404Content />
+                        <Footer />
+                    </div>
+                </Route>
             </Switch>
         )
     }
