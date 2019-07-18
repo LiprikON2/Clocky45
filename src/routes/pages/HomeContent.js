@@ -20,6 +20,7 @@ export default class Content extends React.Component {
             }} 
             value={currentTime}
             contenteditable="true"
+            readOnly="false"
         />
         ReactDOM.render(textArea, document.getElementById('copyNode'));
 
