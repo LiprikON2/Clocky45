@@ -19,13 +19,40 @@ export default class Content extends React.Component {
                 background: 'transparent'
             }} 
             value={currentTime}
-            contenteditable="true"
-            readOnly="false"
         />
         ReactDOM.render(textArea, document.getElementById('copyNode'));
+        
+        const textAreaId = document.getElementById('textArea')
+        textAreaId.focus()
+        textAreaId.select()
+        // handle iOS as a special case
+        if (navigator.userAgent.match(/ipad|ipod|iphone/i)) {
 
-        document.getElementById('textArea').focus()
-        document.getElementById('textArea').select()
+            // save current contentEditable/readOnly status
+            const editable = textAreaId.contentEditable;
+            const readOnly = textAreaId.readOnly;
+
+            // convert to editable with readonly to stop iOS keyboard opening
+            textAreaId.contentEditable = true;
+            textAreaId.readOnly = true;
+
+            // create a selectable range
+            const range = document.createRange();
+            range.selectNodeContents(textAreaId);
+
+            // select the range
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            textAreaId.setSelectionRange(0, 999999);
+
+            // restore contentEditable/readOnly to original state
+            textAreaId.contentEditable = editable;
+            textAreaId.readOnly = readOnly;
+        }
+        else {
+            textAreaId.select();
+        }
         
       
         try {
