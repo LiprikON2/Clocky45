@@ -1,5 +1,5 @@
 import React from 'react'
-import SiteVersion from './SiteVersion'
+import toggleDesktopMode from './DesktopMode'
 
 
 export default class Content extends React.Component {
@@ -23,8 +23,10 @@ export default class Content extends React.Component {
     }
 
     openCredits = () => {
-        document.querySelector('.credits').style.height = "6.8em"
-        document.querySelector('.panelsContainer').style.height = "6.8em"
+        const isGoMobileAdded = document.querySelector('.mobile').style.display === "unset" ? true : false
+
+        document.querySelector('.credits').style.height = isGoMobileAdded ? "8em" : "6.8em"
+        document.querySelector('.panelsContainer').style.height = isGoMobileAdded ? "8em" : "6.8em"
         document.querySelector('.inc').style.display = "none"
         document.querySelector('.closeCredits').style.display = "unset"
 
@@ -84,16 +86,17 @@ export default class Content extends React.Component {
                 `}})
             }
         }
-        
     }
+
+    
+    
     render() {
         return (
             <footer className="credits" style={this.state.creditsStyle}>
                 <p className="inc" onMouseOver={this.openCredits}>
                     © 2019 Lee Perchino Inc. All rights reserved.&nbsp;
-                    <a href="#" className="showDetails">{this.state.isCreditsOpen ? "Hide" : "Show"} details</a>
+                    <a href="#" className="showDetails">{this.state.isCreditsOpen ? "Hide" : "Show"} details</a>&nbsp;
                 </p>
-                <a href="#" className="mobile" style={{display: "none"}} onClick={SiteVersion.goMobile}>Back to mobile version</a>
                 <div className="panelsContainer">
                     <div className="panel contacts">
                         <h4 className="panelTitle contacts">Contacts</h4>
@@ -112,6 +115,7 @@ export default class Content extends React.Component {
                         </ul>
                     </div>
                 </div>
+                <a href="#" className="mobile" style={{display: "none"}} onClick={toggleDesktopMode}>Back to mobile version</a>
                 <div className="closeCredits" onMouseOver={this.closeCredits} onClick={this.closeCredits} style={{display: "none"}}></div>
             </footer>
         )

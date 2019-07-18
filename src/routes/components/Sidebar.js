@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import SiteVersion from './SiteVersion'
+import toggleDesktopMode from './DesktopMode'
+
 
 const closeNav = () => {
     document.getElementById("mySidenav").style.width = "0"
@@ -10,17 +11,15 @@ const closeNav = () => {
 
 export default class Content extends React.Component {
 
-    
     render() {
         return (
             <div className="sidebar">
                 <div id="mySidenav" className="sidenav">
-                    {/* <a href="javascript:void(0)" className="closebtn" onClick={closeNav}><i className="sidenavCross">&times;</i></a> */}
                     <i className="closebtn unselectable" onClick={closeNav}>&times;</i>
                     <Link to="/" href="#">Home</Link>
                     <Link to="/Main" href="#">Main</Link>
                     <Link to="/About" href="#">About</Link>
-                    <a href="#" className="desktop" onClick={SiteVersion.goDesktop}>Desktop version</a>
+                    <a href="#" className="desktop" onClick={toggleDesktopMode}>Desktop version</a>
                 </div>
                 <div className="closeSidenav" onClick={closeNav}></div>
             </div>
