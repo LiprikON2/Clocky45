@@ -16,7 +16,8 @@ export default class Content extends React.Component {
                 border: 'none',
                 outline: 'none',
                 boxShadow: 'none',
-                background: 'transparent'
+                background: 'transparent',
+                fontSize: '16px'
             }} 
             value={currentTime}
         />
