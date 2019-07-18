@@ -1,27 +1,31 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import Clock from 'react-live-clock'
 
 export default class Content extends React.Component {
 
-    copyTextToClipboard = (text) => {
-        const textArea = document.createElement("textarea");       
+    copyTextToClipboard = (currentTime) => {
+        const textArea = <textarea 
+            id="textArea" 
+            style={{
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                width: '2em',
+                padding: 0,
+                border: 'none',
+                outline: 'none',
+                boxShadow: 'none',
+                background: 'transparent'
+            }} 
+            value={currentTime}
+            contenteditable="true"
+        />
+        ReactDOM.render(textArea, document.getElementById('copyNode'));
+
+        document.getElementById('textArea').focus()
+        document.getElementById('textArea').select()
         
-        textArea.style.position = 'fixed';
-        textArea.style.top = 0;
-        textArea.style.left = 0;
-        textArea.style.width = '2em';
-        textArea.style.height = '2em';
-        textArea.style.padding = 0;
-        textArea.style.border = 'none';
-        textArea.style.outline = 'none';
-        textArea.style.boxShadow = 'none';
-        textArea.style.background = 'transparent'; 
- 
-        textArea.value = text;
-      
-        document.body.appendChild(textArea);
-        textArea.focus();
-        textArea.select();
       
         try {
             const successful = document.execCommand('copy');
@@ -30,19 +34,21 @@ export default class Content extends React.Component {
         } catch (err) {
             console.log('Oops, unable to copy');
         }
-      
-        document.body.removeChild(textArea);
+        ReactDOM.unmountComponentAtNode(document.getElementById('copyNode'))
     }
     handleCopy = () => {
-        this.copyTextToClipboard(document.querySelector('.clock.timer').innerHTML)
-        document.querySelector('.popup.timer').style.visibility = "unset"
-        document.querySelector('.popup.timer').style.opacity = "1"
+        const currentTime = document.querySelector('.clock.timer').innerHTML
+        this.copyTextToClipboard(currentTime)
+
+        const popup = document.querySelector('.popup.timer')
+        popup.style.visibility = "unset"
+        popup.style.opacity = "1"
         setTimeout(function() {
-            document.querySelector('.popup.timer').style.opacity = "0"
+            popup.style.opacity = "0"
         }, 1000);
         setTimeout(function() {
-            document.querySelector('.popup.timer').style.visibility = "hidden"
-        }, 1500);
+            popup.style.visibility = "hidden"
+        }, 1800);
         
     }
 
