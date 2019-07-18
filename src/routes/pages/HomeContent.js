@@ -42,7 +42,7 @@ export default class Content extends React.Component {
         }, 1000);
         setTimeout(function() {
             document.querySelector('.popup.timer').style.visibility = "hidden"
-        }, 1400);
+        }, 1500);
         
     }
     render() {
