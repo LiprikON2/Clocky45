@@ -186,7 +186,9 @@ html, body, #root {
     margin-left: 36px;
     text-decoration: none;
 }
-
+.logo:active {
+    filter: brightness(85%);
+}
 .logo-img {
     width: 100px;
     /*FIREFOX ZOOM FIX*/
@@ -245,6 +247,13 @@ html, body, #root {
     justify-self: unset;
 }
 
+.popup {
+    position: absolute;
+    width: 343px;
+    transition: opacity 0.5s;
+    visibility: hidden;
+    opacity: 0;
+}
 
 .timer, .timer.full {
     display: inline;
@@ -255,6 +264,10 @@ html, body, #root {
     border-radius: 10px;
     padding: 0 10px 0 10px;
     cursor: pointer;
+}
+
+.timer:active {
+    filter: brightness(85%);
 }
 
 /* EROR 404 */
@@ -508,6 +521,11 @@ html, body, #root {
         grid-row: 2 / 5;
     }
 
+    .popup {
+        position: absolute;
+        width: 502px;
+    }
+
     .timer {
         font-size: 135px;
     }
@@ -694,11 +712,6 @@ html, body, #root {
         .er404.text {
             justify-self: center;
             align-self: end;
-        }
-        .er404.button.back {
-            /* width: 685px;
-            height: 150px;
-            font-size: 80px; */
         }
     }
     @media screen and (max-width: 800px), screen and (max-height: 750px) and (orientation: landscape) {

@@ -33,15 +33,25 @@ export default class Content extends React.Component {
       
         document.body.removeChild(textArea);
     }
-    copyTime = () => {
-        this.copyTextToClipboard(document.querySelector('.timer').innerHTML)
+    handleCopy = () => {
+        this.copyTextToClipboard(document.querySelector('.clock.timer').innerHTML)
+        document.querySelector('.popup.timer').style.visibility = "unset"
+        document.querySelector('.popup.timer').style.opacity = "1"
+        setTimeout(function() {
+            document.querySelector('.popup.timer').style.opacity = "0"
+        }, 1000);
+        setTimeout(function() {
+            document.querySelector('.popup.timer').style.visibility = "hidden"
+        }, 1400);
+        
     }
     render() {
         return (
             <section className="container">
                 <h6 className="title fancy">
                     <p>The Fanciest Clock in the Universe!</p>
-                        <Clock className="timer unselectable" ticking={true} value="so thats it?" format="HH:mm:ss" onClick={this.copyTime}/>
+                        <div class="popup timer">Copied!</div>
+                        <Clock className="clock timer unselectable" ticking={true} format="HH:mm:ss" onClick={this.handleCopy}/>
                     <br/>
                 </h6>
                 <img src="css/img/custom-hand.png" alt="Hand with a clock" className="hand-img"/>
