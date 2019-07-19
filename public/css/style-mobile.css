@@ -70,6 +70,7 @@
     }
 
     .popup {
+        justify-self: center
         position: absolute;
         top: 637px;
         height: 179px;
