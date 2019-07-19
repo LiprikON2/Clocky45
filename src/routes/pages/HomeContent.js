@@ -89,10 +89,8 @@ export default class Content extends React.Component {
             <section className="container">
                 <h6 className="title fancy">
                     <p>The Fanciest Clock in the Universe!</p>
-                        <div className="timer">
-                            <div className="popup timer">Copied!</div>
-                            <Clock className="clock timer unselectable" ticking={true} format="HH:mm:ss" onClick={this.handleCopy}/>
-                        </div>
+                        <div className="popup timer">Copied!</div>
+                        <Clock className="clock timer unselectable" ticking={true} format="HH:mm:ss" onClick={this.handleCopy}/>
                     <br/>
                 </h6>
                 <img src="css/img/custom-hand.png" alt="Hand with a clock" className="hand-img"/>
