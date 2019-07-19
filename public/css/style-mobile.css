@@ -70,9 +70,9 @@
     }
 
     .popup {
-        justify-self: center
+        justify-self: center;
         position: absolute;
-        top: 637px;
+        top: 635px;
         height: 179px;
         width: 503px;
     }
