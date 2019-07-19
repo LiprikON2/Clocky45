@@ -24,8 +24,11 @@ export default class Content extends React.Component {
         ReactDOM.render(textArea, document.getElementById('copyNode'));
         
         const textAreaId = document.getElementById('textArea')
+        console.log("TCL: Content -> copyTextToClipboard -> textAreaId", textAreaId)
+        
         textAreaId.focus()
         textAreaId.select()
+        textAreaId.readOnly = true;
         // handle iOS as a special case
         if (navigator.userAgent.match(/ipad|ipod|iphone/i)) {
 

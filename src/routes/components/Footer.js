@@ -95,7 +95,7 @@ export default class Content extends React.Component {
             <footer className="credits" style={this.state.creditsStyle}>
                 <p className="inc" onMouseOver={this.openCredits}>
                     © 2019 Lee Perchino Inc. All rights reserved.&nbsp;
-                    <a href="#" className="showDetails">{this.state.isCreditsOpen ? "Hide" : "Show"} details</a>&nbsp;
+                    <a href="#" className="showDetails">{this.state.isCreditsOpen ? "Hide" : "Show"} details</a>
                 </p>
                 <div className="panelsContainer">
                     <div className="panel contacts">
