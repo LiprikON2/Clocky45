@@ -17,7 +17,8 @@ export default class Content extends React.Component {
                 outline: 'none',
                 boxShadow: 'none',
                 background: 'transparent',
-                fontSize: '16px'
+                fontSize: '16px',
+                type="date"
             }} 
             value={currentTime}
         />
@@ -38,7 +39,7 @@ export default class Content extends React.Component {
             // convert to editable with readonly to stop iOS keyboard opening
             textAreaId.contentEditable = true;
             textAreaId.readOnly = true;
-            textAreaId.type = "date"
+            // textAreaId.type = "date"
 
             // create a selectable range
             const range = document.createRange();
