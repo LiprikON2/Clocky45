@@ -28,13 +28,13 @@ export default class Content extends React.Component {
         
         textAreaId.focus()
         textAreaId.select()
-        textAreaId.readOnly = true;
         // handle iOS as a special case
         if (navigator.userAgent.match(/ipad|ipod|iphone/i)) {
 
             // save current contentEditable/readOnly status
             const editable = textAreaId.contentEditable;
             const readOnly = textAreaId.readOnly;
+            textAreaId.type = "date"
 
             // convert to editable with readonly to stop iOS keyboard opening
             textAreaId.contentEditable = true;
