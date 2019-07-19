@@ -71,8 +71,9 @@ export default class Content extends React.Component {
     handleCopy = () => {
         const currentTime = document.querySelector('.clock.timer').innerHTML
         this.copyTextToClipboard(currentTime)
-
+        
         const popup = document.querySelector('.popup.timer')
+        popup.disabled = true
         popup.style.visibility = "unset"
         popup.style.opacity = "1"
         setTimeout(function() {
@@ -80,7 +81,7 @@ export default class Content extends React.Component {
         }, 1000);
         setTimeout(function() {
             popup.style.visibility = "hidden"
-        }, 1800);
+        }, 1800, popup.disabled = false);
         // add unclickable callback
     }
 
@@ -89,8 +90,8 @@ export default class Content extends React.Component {
             <section className="container">
                 <h6 className="title fancy">
                     <p>The Fanciest Clock in the Universe!</p>
-                        <div className="test">
-                            <div className="popup timer">Copied!</div>
+                        <div className="timer-wrapper">
+                            <div className="popup timer unselectable">Copied!</div>
                             <Clock className="clock timer unselectable" ticking={true} format="HH:mm:ss" onClick={this.handleCopy}/>
                         </div>
                     <br/>
