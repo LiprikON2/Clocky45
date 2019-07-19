@@ -65,15 +65,22 @@
         grid-column: 2 / -2;
         grid-row: 2 / 6;
     }
+    .test {
+        display: grid;
+    }
 
     .popup {
+        position: absolute;
+        top: 625px;
         height: 179px;
         width: 503px;
     }
     
     .timer {
+        justify-self: center;
         padding: 15px 10px 0 10px;
         font-size: 135px;
+        width: 503px;
         height: 179px;
     }
 
