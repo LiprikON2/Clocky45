@@ -21,44 +21,41 @@ export default class Content extends React.Component {
             }} 
             value={currentTime}
             readOnly={true}
+            // prevents iOS keyboard popup
             type="date"
         />
         ReactDOM.render(textArea, document.getElementById('copyNode'));
         
         const textAreaId = document.getElementById('textArea')
-        console.log("TCL: Content -> copyTextToClipboard -> textAreaId", textAreaId.type)
         
-        textAreaId.focus()
-        textAreaId.select()
         // handle iOS as a special case
         if (navigator.userAgent.match(/ipad|ipod|iphone/i)) {
-
+            
             // save current contentEditable/readOnly status
-            const editable = textAreaId.contentEditable;
-            const readOnly = textAreaId.readOnly;
+            const editable = textAreaId.contentEditable
+            const readOnly = textAreaId.readOnly
             
             // convert to editable with readonly to stop iOS keyboard opening
-            textAreaId.contentEditable = true;
-            textAreaId.readOnly = true;
-            // textAreaId.type = "date"
-            console.log("TCL: Content -> copyTextToClipboard -> textAreaId.type", textAreaId.type)
-
+            textAreaId.contentEditable = true
+            textAreaId.readOnly = true
+            
             // create a selectable range
-            const range = document.createRange();
-            range.selectNodeContents(textAreaId);
-
+            const range = document.createRange()
+            range.selectNodeContents(textAreaId)
+        
             // select the range
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            textAreaId.setSelectionRange(0, 999999);
-
+            const selection = window.getSelection()
+            selection.removeAllRanges()
+            selection.addRange(range)
+            textAreaId.setSelectionRange(0, 999999)
+            
             // restore contentEditable/readOnly to original state
-            textAreaId.contentEditable = editable;
-            textAreaId.readOnly = readOnly;
+            textAreaId.contentEditable = editable
+            textAreaId.readOnly = readOnly
         }
         else {
-            textAreaId.select();
+            textAreaId.focus()
+            textAreaId.select()
         }
         
       
