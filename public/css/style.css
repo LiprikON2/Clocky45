@@ -246,17 +246,25 @@ html, body, #root {
     grid-row: 2 / -2;
     justify-self: unset;
 }
+.test {
+    position: relative;
+}
 
 .popup {
-    position: absolute;
+    /* position: absolute; */
     width: 343px;
+    height: 110px;
     transition: opacity 0.5s;
     visibility: hidden;
     opacity: 0;
+    top: -110px;
+    /* right: 0; */
+    position: relative;
+    display: inline-block;
 }
 
 .timer {
-    display: inline;
+    /* display: inline; */
     font-family: Calibri, sans-serif;
     font-size: 90px;
     color: black;
@@ -264,6 +272,8 @@ html, body, #root {
     border-radius: 10px;
     padding: 0 10px 0 10px;
     cursor: pointer;
+    height: 110px;
+    
 }
 
 .timer:active {
