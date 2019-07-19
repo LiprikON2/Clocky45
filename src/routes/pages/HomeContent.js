@@ -73,7 +73,10 @@ export default class Content extends React.Component {
         this.copyTextToClipboard(currentTime)
         
         const popup = document.querySelector('.popup.timer')
+        // anti spam
         popup.disabled = true
+
+        // fancy transition
         popup.style.visibility = "unset"
         popup.style.opacity = "1"
         setTimeout(function() {
@@ -82,7 +85,6 @@ export default class Content extends React.Component {
         setTimeout(function() {
             popup.style.visibility = "hidden"
         }, 1800, popup.disabled = false);
-        // add unclickable callback
     }
 
     render() {
