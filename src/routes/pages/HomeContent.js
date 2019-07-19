@@ -17,14 +17,16 @@ export default class Content extends React.Component {
                 outline: 'none',
                 boxShadow: 'none',
                 background: 'transparent',
-                fontSize: '16px',
+                fontSize: '16px'
             }} 
             value={currentTime}
+            readOnly={true}
+            type="date"
         />
         ReactDOM.render(textArea, document.getElementById('copyNode'));
         
         const textAreaId = document.getElementById('textArea')
-        console.log("TCL: Content -> copyTextToClipboard -> textAreaId", textAreaId)
+        console.log("TCL: Content -> copyTextToClipboard -> textAreaId", textAreaId.type)
         
         textAreaId.focus()
         textAreaId.select()
@@ -36,9 +38,10 @@ export default class Content extends React.Component {
             const readOnly = textAreaId.readOnly;
             
             // convert to editable with readonly to stop iOS keyboard opening
-            textAreaId.readOnly = true;
-            textAreaId.type = "date"
             textAreaId.contentEditable = true;
+            textAreaId.readOnly = true;
+            // textAreaId.type = "date"
+            console.log("TCL: Content -> copyTextToClipboard -> textAreaId.type", textAreaId.type)
 
             // create a selectable range
             const range = document.createRange();
