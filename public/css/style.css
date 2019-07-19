@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 @font-face {
-    font-family: 'Calibri';
+    font-family: 'CalibriK';
     src: url('./fonts/Calibri/Calibri-LightItalic.eot');
     src: local('./fonts/Calibri/Calibri Light Italic'), local('Calibri-LightItalic'),
         url('./fonts/Calibri/Calibri-LightItalic.eot?#iefix') format('embedded-opentype'),
@@ -14,7 +14,7 @@
 }
 
 @font-face {
-    font-family: 'Calibri';
+    font-family: 'CalibriK';
     src: url('./fonts/Calibri/Calibri-Italic.eot');
     src: local('./fonts/Calibri/Calibri Italic'), local('Calibri-Italic'),
         url('./fonts/Calibri/Calibri-Italic.eot?#iefix') format('embedded-opentype'),
@@ -26,7 +26,7 @@
 }
 
 @font-face {
-    font-family: 'Calibri';
+    font-family: 'CalibriK';
     src: url('./fonts/Calibri/Calibri-Light.eot');
     src: local('./fonts/Calibri/Calibri Light'), local('Calibri-Light'),
         url('./fonts/Calibri/Calibri-Light.eot?#iefix') format('embedded-opentype'),
@@ -38,7 +38,7 @@
 }
 
 @font-face {
-    font-family: 'Calibri';
+    font-family: 'CalibriK';
     src: url('./fonts/Calibri/Calibri-Bold.eot');
     src: local('./fonts/Calibri/Calibri Bold'), local('Calibri-Bold'),
         url('./fonts/Calibri/Calibri-Bold.eot?#iefix') format('embedded-opentype'),
@@ -50,7 +50,7 @@
 }
 
 @font-face {
-    font-family: 'Calibri';
+    font-family: 'CalibriK';
     src: url('./fonts/Calibri/Calibri.eot');
     src: local('./fonts/Calibri/Calibri'),
         url('./fonts/Calibri/Calibri.eot?#iefix') format('embedded-opentype'),
@@ -62,7 +62,7 @@
 }
 
 @font-face {
-    font-family: 'Calibri';
+    font-family: 'CalibriK';
     src: url('./fonts/Calibri/Calibri-BoldItalic.eot');
     src: local('./fonts/Calibri/Calibri Bold Italic'), local('Calibri-BoldItalic'),
         url('./fonts/Calibri/Calibri-BoldItalic.eot?#iefix') format('embedded-opentype'),
@@ -220,7 +220,7 @@ html, body, #root {
 /* CONTENT */
 .container {
     display: grid;
-    font-family: Calibri, sans-serif;
+    font-family: CalibriK, sans-serif;
     font-size: 60px;
     color: #fec00f;
     grid-template-columns: repeat(12, 1fr);
@@ -257,7 +257,7 @@ html, body, #root {
 
 .timer {
     display: inline;
-    font-family: Calibri, sans-serif;
+    font-family: CalibriK, sans-serif;
     font-size: 90px;
     color: black;
     background-color: #fec00f;
@@ -273,7 +273,7 @@ html, body, #root {
 /* EROR 404 */
 .er404.holder {
     display: grid;
-    font-family: Calibri, sans-serif;
+    font-family: CalibriK, sans-serif;
     -webkit-font-smoothing: antialiased;
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;
@@ -347,7 +347,7 @@ html, body, #root {
     width: 100%;
     text-align: center;
     font-size: 1.2em;
-    font-family: Calibri, sans-serif;
+    font-family: CalibriK, sans-serif;
     background-color: #fec00f;
     transition: height 0.5s;
     grid-template-columns: repeat(4, 1fr);
