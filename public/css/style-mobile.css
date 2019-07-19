@@ -67,13 +67,14 @@
     }
 
     .popup {
-        position: absolute;
-        width: 502px;
+        height: 179px;
+        width: 503px;
     }
-
+    
     .timer {
         padding: 15px 10px 0 10px;
         font-size: 135px;
+        height: 179px;
     }
 
     .hand-img {
