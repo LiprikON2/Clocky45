@@ -34,11 +34,11 @@ export default class Content extends React.Component {
             // save current contentEditable/readOnly status
             const editable = textAreaId.contentEditable;
             const readOnly = textAreaId.readOnly;
-            textAreaId.type = "date"
-
+            
             // convert to editable with readonly to stop iOS keyboard opening
             textAreaId.contentEditable = true;
             textAreaId.readOnly = true;
+            textAreaId.type = "date"
 
             // create a selectable range
             const range = document.createRange();
