@@ -256,16 +256,14 @@ html, body, #root {
 }
 
 .timer {
-    /* display: inline; */
+    display: inline;
     font-family: Calibri, sans-serif;
     font-size: 90px;
     color: black;
     background-color: #fec00f;
     border-radius: 10px;
-    padding: 10px 10px 0 10px;
+    padding: 0 10px 0 10px;
     cursor: pointer;
-    height: 164px;
-    line-height: 164px;
 }
 
 .timer:active {
