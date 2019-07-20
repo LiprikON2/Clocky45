@@ -24,6 +24,7 @@ export default class Content extends React.Component {
 
     openCredits = () => {
         const isGoMobileAdded = document.querySelector('.mobile').style.display === "unset" ? true : false
+        console.log("TCL: Content -> openCredits -> isGoMobileAdded", isGoMobileAdded)
 
         document.querySelector('.credits').style.height = isGoMobileAdded ? "8em" : "6.8em"
         document.querySelector('.panelsContainer').style.height = isGoMobileAdded ? "8em" : "6.8em"
@@ -115,7 +116,7 @@ export default class Content extends React.Component {
                         </ul>
                     </div>
                 </div>
-                <a href="#" className="mobile" style={{display: "none"}} onClick={toggleDesktopMode}>Back to mobile version</a>
+                <a href="#" className="mobile" onClick={toggleDesktopMode}>Back to mobile version</a>
                 <div className="closeCredits" onMouseOver={this.closeCredits} onClick={this.closeCredits} style={{display: "none"}}></div>
             </footer>
         )

@@ -44,7 +44,9 @@ export default {goDesktop, goMobile}
 
 
 export default function toggleDesktopMode() {
+    console.log('wtf');
     document.styleSheets[1].disabled = !document.styleSheets[1].disabled
-    document.querySelector('.mobile').style.display = "unset"
-    document.querySelector('.page-container').style.zoom = "0.5"
+    console.log(document.querySelector('.mobile').style.display);
+    // document.querySelector('.mobile').style.display = "unset"
+    // document.querySelector('.page-container').style.zoom = "0.5"
 }
