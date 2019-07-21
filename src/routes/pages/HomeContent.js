@@ -68,14 +68,15 @@ export default class Content extends React.Component {
         }
         ReactDOM.unmountComponentAtNode(document.getElementById('copyNode'))
     }
+
     handleCopy = () => {
         const currentTime = document.querySelector('.clock.timer').innerHTML
         this.copyTextToClipboard(currentTime)
         
         const popup = document.querySelector('.popup.timer')
-        // anti spam
+        // anti click spam
         popup.disabled = true
-
+        
         // fancy transition
         popup.style.visibility = "unset"
         popup.style.opacity = "1"
@@ -86,6 +87,17 @@ export default class Content extends React.Component {
             popup.style.visibility = "hidden"
         }, 1800, popup.disabled = false);
     }
+
+    addAnimation = (animName, target, duration = 1000) => {
+        target = document.querySelector(`${target}`)
+        target.disabled = true
+        target.classList.add(`anim-${animName}`)
+        setTimeout(() => {
+            target.classList.remove(`anim-${animName}`)
+            target.disabled = false
+        }, duration)
+    }
+    
 
     render() {
         return (
@@ -98,7 +110,7 @@ export default class Content extends React.Component {
                         </div>
                     <br/>
                 </h6>
-                <img src="css/img/custom-hand.png" alt="Hand with a clock" className="hand-img"/>
+                <img src="css/img/custom-hand.png" alt="Hand with a clock" className="hand-img" onClick={() => {this.addAnimation('tada', '.hand-img')}}/>
             </section>
         )
     }

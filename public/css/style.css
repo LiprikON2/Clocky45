@@ -73,18 +73,28 @@
     font-style: italic;
 }
 
-
 /*
- <-- COLORS -->
-    #f26159; - redish
-    #191919; - gray
-    #fec00f; - yellow
+<-- COLORS -->
+#f26159; - redish
+#191919; - gray
+#fec00f; - yellow
 
 <-- DESKTOP VERSION REQUEST -->
-    desktop_example.html
-    https://stackoverflow.com/questions/21312707/show-full-site-button-to-bypass-css-media-queries
+desktop_example.html
+https://stackoverflow.com/questions/21312707/show-full-site-button-to-bypass-css-media-queries
 
 */
+/* ANIMATIONS */
+.anim-tada {
+    animation-name: tada;
+    animation-duration: 1s;
+    animation-delay: 0;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: ease;
+    animation-fill-mode: none;
+    
+}
 
 
 /* TOPNAV BUTTON */
@@ -245,8 +255,10 @@ html, body, #root {
     grid-column: 8 / 13;
     grid-row: 2 / -2;
     justify-self: unset;
-}
 
+    
+        
+}
 .popup {
     position: absolute;
     width: 343px;
