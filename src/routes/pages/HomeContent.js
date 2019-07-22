@@ -4,8 +4,6 @@ import Clock from 'react-live-clock'
 
 export default class Content extends React.Component {
 
-    handImg = React.createRef();
-
     copyTextToClipboard = (currentTime) => {
         const textArea = <textarea 
             id="textArea" 
@@ -70,40 +68,50 @@ export default class Content extends React.Component {
         }
         ReactDOM.unmountComponentAtNode(document.getElementById('copyNode'))
     }
-
-    handleCopy = () => {
-        const currentTime = document.querySelector('.clock.timer').innerHTML
-        this.copyTextToClipboard(currentTime)
-        
-        const popup = document.querySelector('.popup.timer')
-        // anti click spam
-        popup.disabled = true
-        
-        // fancy transition
-        popup.style.visibility = "unset"
-        popup.style.opacity = "1"
-        setTimeout(function() {
-            popup.style.opacity = "0"
-        }, 1000);
-        setTimeout(function() {
-            popup.style.visibility = "hidden"
-        }, 1800, popup.disabled = false);
-    }
-
-    runAnimation = (animName, target, duration = 1000) => {
-        console.log('click');
+    
+    // Adds animation from Animate.css to selected element
+    applyAnimation = (target, animName, duration = 1000) => {
         target = document.querySelector(`${target}`)
         target.disabled = true
-        console.log("target.disabled", target.disabled)
         target.classList.add(`anim-${animName}`)
         setTimeout(() => {
             target.classList.remove(`anim-${animName}`)
             target.disabled = false
-            console.log("target.disabled", target.disabled)
         }, duration)
     }
     
-
+    // Adds transition to selected element
+    applyTransition = (target, transitionVal = "opacity 0.5s", durationIn = 1000, durationOut = 1800) => {
+        target = document.querySelector(`${target}`)
+        // anti click spam
+        target.disabled = true
+        
+        target.style.transition = transitionVal
+        target.style.visibility = "unset"
+        target.style.opacity = "1"
+        setTimeout(function() {
+            target.style.opacity = "0"
+        }, durationIn);
+        setTimeout(function() {
+            target.style.visibility = "hidden"
+        }, durationOut, target.disabled = false);
+        
+    }
+    
+    handleClick = (event) => {
+        switch(event.target.className) {
+            case 'clock timer unselectable':
+                const currentTime = document.querySelector('.clock.timer').innerHTML
+                this.copyTextToClipboard(currentTime)
+                this.applyTransition('.popup')
+                return
+                
+            case 'hand-img':
+                this.applyAnimation('.hand-img', 'tada')
+                return
+        }
+    }
+    
     render() {
         return (
             <section className="container">
@@ -115,17 +123,16 @@ export default class Content extends React.Component {
                                 className="clock timer unselectable" 
                                 ticking={true} 
                                 format="HH:mm:ss" 
-                                onClick={this.handleCopy}
+                                onClick={this.handleClick}
                                 />
                         </div>
                     <br/>
                 </h6>
                 <img
-                    ref={this.handImg}
                     src="css/img/custom-hand.png" 
                     alt="Hand with a clock" 
                     className="hand-img"
-                    onClick={  ( () => {this.runAnimation('tada', '.hand-img')} ) }               
+                    onClick={this.handleClick}               
                     />
             </section>
         )
