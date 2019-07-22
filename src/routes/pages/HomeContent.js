@@ -4,6 +4,8 @@ import Clock from 'react-live-clock'
 
 export default class Content extends React.Component {
 
+    handImg = React.createRef();
+
     copyTextToClipboard = (currentTime) => {
         const textArea = <textarea 
             id="textArea" 
@@ -88,13 +90,16 @@ export default class Content extends React.Component {
         }, 1800, popup.disabled = false);
     }
 
-    addAnimation = (animName, target, duration = 1000) => {
+    runAnimation = (animName, target, duration = 1000) => {
+        console.log('click');
         target = document.querySelector(`${target}`)
         target.disabled = true
+        console.log("target.disabled", target.disabled)
         target.classList.add(`anim-${animName}`)
         setTimeout(() => {
             target.classList.remove(`anim-${animName}`)
             target.disabled = false
+            console.log("target.disabled", target.disabled)
         }, duration)
     }
     
@@ -106,12 +111,25 @@ export default class Content extends React.Component {
                     <p>The Fanciest Clock in the Universe!</p>
                         <div className="timer-wrapper">
                             <div className="popup timer unselectable">Copied!</div>
-                            <Clock className="clock timer unselectable" ticking={true} format="HH:mm:ss" onClick={this.handleCopy}/>
+                            <Clock
+                                className="clock timer unselectable" 
+                                ticking={true} 
+                                format="HH:mm:ss" 
+                                onClick={this.handleCopy}
+                                />
                         </div>
                     <br/>
                 </h6>
-                <img src="css/img/custom-hand.png" alt="Hand with a clock" className="hand-img" onClick={() => {this.addAnimation('tada', '.hand-img')}}/>
+                <img
+                    ref={this.handImg}
+                    src="css/img/custom-hand.png" 
+                    alt="Hand with a clock" 
+                    className="hand-img"
+                    onClick={  ( () => {this.runAnimation('tada', '.hand-img')} ) }               
+                    />
             </section>
         )
     }
 }
+
+//  && this.handImg.current.disabled
