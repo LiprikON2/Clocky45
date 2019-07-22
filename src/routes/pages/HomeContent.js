@@ -69,14 +69,18 @@ export default class Content extends React.Component {
         ReactDOM.unmountComponentAtNode(document.getElementById('copyNode'))
     }
     
-    // Adds animation from Animate.css to selected element
+    // Adds premade animation from Animate.css to selected element
     applyAnimation = (target, animName, duration = 1000) => {
         target = document.querySelector(`${target}`)
+        // anti click spam
         target.disabled = true
+        target.style.cursor = "unset"
+
         target.classList.add(`anim-${animName}`)
         setTimeout(() => {
             target.classList.remove(`anim-${animName}`)
             target.disabled = false
+            target.style.cursor = "pointer"
         }, duration)
     }
     
@@ -91,10 +95,11 @@ export default class Content extends React.Component {
         target.style.opacity = "1"
         setTimeout(function() {
             target.style.opacity = "0"
-        }, durationIn);
+        }, durationIn)
         setTimeout(function() {
             target.style.visibility = "hidden"
-        }, durationOut, target.disabled = false);
+            target.disabled = false
+        }, durationOut)
         
     }
     
