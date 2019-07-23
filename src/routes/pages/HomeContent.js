@@ -84,7 +84,7 @@ export default class Content extends React.Component {
         }, duration)
     }
     
-    // Adds transition to selected element
+    // Adds popup transition to selected element
     applyTransition = (target, transitionVal = "opacity 0.5s", durationIn = 1000, durationOut = 1800) => {
         target = document.querySelector(`${target}`)
         // anti click spam
