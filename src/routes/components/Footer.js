@@ -1,5 +1,5 @@
 import React from 'react'
-import toggleDesktopMode from './DesktopMode'
+// import toggleDesktopMode from '../../functions/toggleDesktop'
 
 
 export default class Content extends React.Component {
@@ -116,7 +116,7 @@ export default class Content extends React.Component {
                         </ul>
                     </div>
                 </div>
-                <a href="#" className="mobile" onClick={toggleDesktopMode}>Back to mobile version</a>
+                <a href="#" className="mobile" onClick={this.props.toggleDesktop}>Back to mobile version</a>
                 <div className="closeCredits" onMouseOver={this.closeCredits} onClick={this.closeCredits} style={{display: "none"}}></div>
             </footer>
         )

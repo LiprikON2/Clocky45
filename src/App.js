@@ -1,6 +1,10 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom'
 
+//Functions
+import toggleDesktop from './functions/toggleDesktop'
+import anims from './functions/anims'
+
 //Components
 import Sidebar from "./routes/components/Sidebar"
 import Header from './routes/components/Header'
@@ -20,37 +24,37 @@ export default class App extends React.Component {
             <Switch>
                 <Route exact path="/">
                     <div className="page-container">
-                        <Sidebar />
+                        <Sidebar toggleDesktop={toggleDesktop} />
                         <Header />
-                        <HomeContent />
-                        <Footer />
+                        <HomeContent anims={anims} />
+                        <Footer toggleDesktop={toggleDesktop} />
                     </div>
                 </Route>
 
                 <Route exact path="/Main">
                     <div className="page-container">
-                        <Sidebar />
+                        <Sidebar toggleDesktop={toggleDesktop} />
                         <Header />
                         <MainContent />
-                        <Footer />
+                        <Footer toggleDesktop={toggleDesktop} />
                     </div>
                 </Route>
 
                 <Route exact path="/About">
                     <div className="page-container">
-                        <Sidebar />
+                        <Sidebar toggleDesktop={toggleDesktop}/>
                         <Header />
                         <AboutContent />
-                        <Footer />
+                        <Footer toggleDesktop={toggleDesktop}/>
                     </div>
                 </Route>
 
                 <Route path="/">
                     <div className="page-container">
-                        <Sidebar />
+                        <Sidebar toggleDesktop={toggleDesktop}/>
                         <Header />
-                        <Er404Content />
-                        <Footer />
+                        <Er404Content anims={anims} />
+                        <Footer toggleDesktop={toggleDesktop}/>
                     </div>
                 </Route>
             </Switch>

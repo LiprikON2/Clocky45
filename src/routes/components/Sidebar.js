@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import toggleDesktopMode from './DesktopMode'
+// import toggleDesktopMode from '../../functions/toggleDesktop'
 
 
 const closeNav = () => {
@@ -19,7 +19,7 @@ export default class Content extends React.Component {
                     <Link to="/" href="#">Home</Link>
                     <Link to="/Main" href="#">Main</Link>
                     <Link to="/About" href="#">About</Link>
-                    <a href="#" className="desktop" onClick={toggleDesktopMode}>Desktop version</a>
+                    <a href="#" className="desktop" onClick={this.props.toggleDesktop}>Desktop version</a>
                 </div>
                 <div className="closeSidenav" onClick={closeNav}></div>
             </div>

@@ -316,6 +316,20 @@ html, body, #root {
     width: 333px;
     height: 80px;
 }
+
+
+
+.animate-206798:hover {
+    animation-name: slideOutLeft;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: ease;
+    animation-fill-mode: none;
+}
+
+
 /* BACK BUTTON */
 .button.back {
     width: 333px;
