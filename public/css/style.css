@@ -86,6 +86,7 @@ https://stackoverflow.com/questions/21312707/show-full-site-button-to-bypass-css
 */
 /* ANIMATIONS */
 .anim-tada {
+    -webkit-transform: translate3d(0, 0, 0);
     animation-name: tada;
     animation-duration: 1s;
     animation-delay: 0;
