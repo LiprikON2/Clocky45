@@ -1,4 +1,4 @@
-.myButt {
+.er404-btn {
   padding: 10px;
   display: block;
   cursor: pointer;
@@ -16,11 +16,11 @@
   -ms-transition: all 0.5s ease, background-color 0.2s;
 }
 
-.four {
+.er404-btn {
   overflow: hidden;
 }
 
-.four span {
+.er404-btn span {
   color: #fec00f;
   display: inline-block;
   transition: all 0.3s ease, background-color 0.2s;
@@ -30,7 +30,7 @@
   -ms-transition: all 0.3s ease, background-color 0.2s;
 }
 
-.four .icon {
+.er404-btn .icon {
   position: absolute;
   left: -80px;
   top: -3.5px;
@@ -44,20 +44,20 @@
   -ms-transition: all 0.3s ease, background-color 0.2s;
 }
 
-.four:hover .icon {
+.er404-btn:hover .icon {
   left: 0px;
 }
 
-.four:hover span {
+.er404-btn:hover span {
   color: #fec00f;
-  margin-left: 75px;
+  margin-left: 80px;
 }
 
-.four:focus span {
-  color: black;
-}
-
-.myButt:focus {
+.er404-btn:focus {
   background-color: #fec00f;
+}
+
+.er404-btn:focus span {
+  color: black;
 }
 /*# sourceMappingURL=SASS-button.css.map */

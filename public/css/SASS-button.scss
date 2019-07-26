@@ -22,10 +22,10 @@ $yellow: #fec00f;
 	-ms-animation:$in;
 }
 
-.myButt {
+.er404-btn {
 	padding:10px;
 	display:block;
-	// margin:50px auto;    
+	// margin:50px auto; 
 	cursor:pointer;
     font-size:40px;
 	position:relative;
@@ -35,15 +35,12 @@ $yellow: #fec00f;
     height: 80px;
     background-color: #191919;
 
-    // transition: background-color 0.2s;
-    // @include transition("all 0.5s ease, background-color 2.2s");
     @include transition(all 0.5s ease);
-    // @include transition(background-color 0.2s ease);
 }
 
 // ################ FOUR
 
-.four {
+.er404-btn {
     overflow:hidden;
 	
 	span {
@@ -71,20 +68,13 @@ $yellow: #fec00f;
 		}
 		span {
             color:$yellow;
-			margin-left:75px;
+			margin-left:80px;
         }
     }
     &:focus {
-        .icon {
-            // color:$yellow;
-            // background-color:black;
-        }
         span {
             color:black;
         }
+        background-color: $yellow;
     }
-}
-.myButt:focus {
-    background-color: $yellow;
-    // transition: background-color 0.2s;
 }

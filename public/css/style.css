@@ -301,7 +301,7 @@ html, body, #root {
 }
 
 /* EROR 404 */
-.er404.holder {
+.er404-holder {
     display: grid;
     font-family: Calibri, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -316,7 +316,7 @@ html, body, #root {
     grid-template-rows: 1fr 1fr;
     
 }
-.er404.big.text {
+.er404-big-text {
     grid-area: er404;
     margin: 0 10px 25px 0;
     justify-self: right;
@@ -324,14 +324,14 @@ html, body, #root {
     font-size: 285px;
 
 }
-.er404.text {
+.er404-text {
     margin: 0 0 0 12px;
     grid-area: text;
     font-size: 45px;
     align-self: end;
 
 }
-.er404.back.button {
+.er404-btn {
     grid-area: back;
     /* width: 333px;
     height: 80px; */
@@ -343,13 +343,13 @@ html, body, #root {
 
 
 /* BACK BUTTON */
-.button.back {
+/* .button.back { */
     /* width: 333px; */
     /* height: 80px; */
     /* font-size: 40px; */
     /* color: #fec00f; */
     /* border: solid #fec00f; */
-}
+/* } */
 /*
 .button.back:hover {
     background-color: #fec00f;
