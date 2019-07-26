@@ -86,7 +86,6 @@ https://stackoverflow.com/questions/21312707/show-full-site-button-to-bypass-css
 */
 /* ANIMATIONS */
 .anim-tada {
-    -webkit-transform: translate3d(0, 0, 0);
     animation-name: tada;
     animation-duration: 1s;
     animation-delay: 0;
@@ -95,6 +94,26 @@ https://stackoverflow.com/questions/21312707/show-full-site-button-to-bypass-css
     animation-timing-function: ease;
     animation-fill-mode: none;
     
+}
+
+.anim-slideOutLeftIN {
+    animation-name: slideOutLeft;
+    animation-duration: 0.5s;
+    animation-delay: 0;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.anim-slideOutLeftOUT {
+    animation-name: slideOutLeft;
+    animation-duration: 0.5s;
+    animation-delay: 0;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
 }
 
 
@@ -314,32 +333,24 @@ html, body, #root {
 }
 .er404.back.button {
     grid-area: back;
-    width: 333px;
-    height: 80px;
+    /* width: 333px;
+    height: 80px; */
+    /* justify-self: start; */
+    /* align-self: start; */
 }
 
 
-
-.animate-206798:hover {
-    animation-name: slideOutLeft;
-    animation-duration: 1s;
-    animation-delay: 0s;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-timing-function: ease;
-    animation-fill-mode: none;
-}
 
 
 /* BACK BUTTON */
 .button.back {
-    width: 333px;
-    height: 80px;
-    font-size: 40px;
-    color: #fec00f;
-    border: solid #fec00f;
+    /* width: 333px; */
+    /* height: 80px; */
+    /* font-size: 40px; */
+    /* color: #fec00f; */
+    /* border: solid #fec00f; */
 }
-
+/*
 .button.back:hover {
     background-color: #fec00f;
     color: black;
@@ -348,7 +359,7 @@ html, body, #root {
 .button.back:active {
     background-color: #fec00f;
     color: black;
-}
+} */
 
 .fas.fa-chevron-circle-left  {
     padding-right: 2%;

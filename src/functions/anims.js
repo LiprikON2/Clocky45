@@ -1,4 +1,4 @@
-// Adds premade animation from Animate.css to selected element
+// Adds CSS class to element that enables premade animation from Animate.css
 const applyAnimation = (target, animName, duration = 1000) => {
     target = document.querySelector(`${target}`)
     // anti click spam... or you can use "throttle(func, 1000)""
@@ -12,6 +12,7 @@ const applyAnimation = (target, animName, duration = 1000) => {
         target.style.cursor = "pointer"
     }, duration)
 }
+
 
 // Adds popup transition to selected element
 const applyTransition = (target, transitionVal = "opacity 0.5s", durationIn = 1000, durationOut = 1800) => {

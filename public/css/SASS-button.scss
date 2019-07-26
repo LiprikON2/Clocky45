@@ -1,0 +1,90 @@
+// ref: https://codepen.io/phenax/pen/vOoOWK
+$yellow: #fec00f;
+@mixin transition($in) {
+	transition:$in, background-color 0.2s;
+	-webkit-transition:$in, background-color 0.2s;
+	-moz-transition:$in, background-color 0.2s;
+	-o-transition:$in, background-color 0.2s;
+    -ms-transition:$in, background-color 0.2s;
+}
+@mixin transform($in) {
+	transform:$in;
+	-webkit-transform:$in;
+	-moz-transform:$in;
+	-o-transform:$in;
+	-ms-transform:$in;
+}
+@mixin animation($in) {
+	animation:$in;
+	-webkit-animation:$in;
+	-moz-animation:$in;
+	-o-animation:$in;
+	-ms-animation:$in;
+}
+
+.myButt {
+	padding:10px;
+	display:block;
+	// margin:50px auto;    
+	cursor:pointer;
+    font-size:40px;
+	position:relative;
+    border:4px solid $yellow;
+    border-radius: 10px;
+    width: 333px;
+    height: 80px;
+    background-color: #191919;
+
+    // transition: background-color 0.2s;
+    // @include transition("all 0.5s ease, background-color 2.2s");
+    @include transition(all 0.5s ease);
+    // @include transition(background-color 0.2s ease);
+}
+
+// ################ FOUR
+
+.four {
+    overflow:hidden;
+	
+	span {
+        color:$yellow;
+		display:inline-block;
+        
+		@include transition(all 0.3s ease);
+	}
+
+	.icon {
+        position:absolute;
+		left:-80px; 
+		top:-3.5px;
+		color:black;
+        padding:20px;
+		background-color:$yellow;
+        // box-shadow: 0 0 1px $yellow;
+		@include transition(all 0.3s ease);
+	}
+    
+	&:hover {
+        .icon {
+            left:0px;
+            
+		}
+		span {
+            color:$yellow;
+			margin-left:75px;
+        }
+    }
+    &:focus {
+        .icon {
+            // color:$yellow;
+            // background-color:black;
+        }
+        span {
+            color:black;
+        }
+    }
+}
+.myButt:focus {
+    background-color: $yellow;
+    // transition: background-color 0.2s;
+}
