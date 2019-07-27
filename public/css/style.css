@@ -134,9 +134,14 @@ https://stackoverflow.com/questions/21312707/show-full-site-button-to-bypass-css
     transition: background 0.1s 0.05s, color 0.1s 0.05s, transform 0.05s;
     white-space: nowrap;
     overflow: hidden;
+
+    
     /*FIREFOX ZOOM FIX*/
-    transform: scale(0.9);
-    /* transform-origin: center right;  */
+    /* transform: scale(0.9); */
+    font-size: 36px;
+    margin: 9px 10px 9px 10px;
+    padding: 2px 27px 0 27px;
+
 
     display: unset;
 }
@@ -146,7 +151,8 @@ https://stackoverflow.com/questions/21312707/show-full-site-button-to-bypass-css
     color: #fec00f;
 }
 .button:active {
-    transform: scale(0.81);
+    transform: scale(0.9);
+    transition: 0.2s;
 }
 
 
@@ -216,8 +222,9 @@ html, body, #root {
     margin-left: 36px;
     text-decoration: none;
 }
-.logo:active {
+.logo:hover .logo-img, .logo:hover .logo-name {
     filter: brightness(85%);
+    /* background-color: yellowgreen; */
 }
 .logo-img {
     width: 100px;
@@ -240,7 +247,7 @@ html, body, #root {
 .navigation {
     display: flex;
     align-self: center;
-    height: 66%;
+    height: 60%;
     grid-column: auto / 13;
 }
 
@@ -325,7 +332,7 @@ html, body, #root {
 
 }
 .er404-text {
-    margin: 0 0 0 12px;
+    margin: 0 0 0 10px;
     grid-area: text;
     font-size: 45px;
     align-self: end;
@@ -333,10 +340,6 @@ html, body, #root {
 }
 .er404-btn {
     grid-area: back;
-    /* width: 333px;
-    height: 80px; */
-    /* justify-self: start; */
-    /* align-self: start; */
 }
 
 

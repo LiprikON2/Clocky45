@@ -107,7 +107,7 @@
         align-content: center;
     }
     .er404-big-text {
-        margin: 0 0 50px 0;
+        margin: 0 0 60px 0;
         height: 470px;
         justify-self: center;
         align-self: end;
@@ -120,14 +120,14 @@
     }
     /* BACK BUTTON */
     .er404.er404-btn {
-        width: 685px;
-        height: 150px;
+        width: 616px;
+        height: 135px;
         font-size: 80px;
         justify-self: center;
     }
     .er404.er404-btn .icon {
         left: -155px;
-        padding: 36px;
+        padding: 30px; /*this*/
     }
     .er404.er404-btn:hover span{
         margin-left: 155px;
@@ -274,12 +274,13 @@
             grid-template-rows: 1fr 1fr;
         }
         .er404-big-text {
-            margin: 0 0 235px 0;
+            margin: 0 0 260px 0;
             justify-self: right;
             align-self: center;
-            font-size: 520px;
+            font-size: 525px;
         }
         .er404-text {
+            margin: 15px 0 15px 0;
             justify-self: center;
             align-self: end;
         }

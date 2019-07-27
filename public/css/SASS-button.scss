@@ -7,13 +7,13 @@ $yellow: #fec00f;
 	-o-transition:$in, background-color 0.2s;
     -ms-transition:$in, background-color 0.2s;
 }
-@mixin transform($in) {
-	transform:$in;
-	-webkit-transform:$in;
-	-moz-transform:$in;
-	-o-transform:$in;
-	-ms-transform:$in;
-}
+// @mixin transform($in) {
+// 	transform:$in;
+// 	-webkit-transform:$in;
+// 	-moz-transform:$in;
+// 	-o-transform:$in;
+// 	-ms-transform:$in;
+// }
 @mixin animation($in) {
 	animation:$in;
 	-webkit-animation:$in;
@@ -25,15 +25,16 @@ $yellow: #fec00f;
 .er404-btn {
 	padding:10px;
 	display:block;
-	// margin:50px auto; 
+    // margin:50px auto;
 	cursor:pointer;
-    font-size:40px;
+    font-size:36px;
 	position:relative;
-    border:4px solid $yellow;
+    border: 4px solid $yellow;
     border-radius: 10px;
-    width: 333px;
-    height: 80px;
+    width: 305px;
+    height: 72px;
     background-color: #191919;
+    // transform: unset;
 
     @include transition(all 0.5s ease);
 }
@@ -53,23 +54,23 @@ $yellow: #fec00f;
 	.icon {
         position:absolute;
 		left:-80px; 
-		top:-3.5px;
+		top:-6px;
 		color:black;
         padding:20px;
 		background-color:$yellow;
-        // box-shadow: 0 0 1px $yellow;
 		@include transition(all 0.3s ease);
 	}
     
 	&:hover {
         .icon {
             left:0px;
-            
 		}
 		span {
             color:$yellow;
 			margin-left:80px;
+            // color:black;
         }
+        // background-color: $yellow;
     }
     &:focus {
         span {
