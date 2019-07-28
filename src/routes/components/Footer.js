@@ -100,15 +100,15 @@ export default class Content extends React.Component {
                 </p>
                 <div className="panelsContainer">
                     <div className="panel contacts">
-                        <h4 className="panelTitle contacts">Contacts</h4>
+                        <h4 className="panelTitle contacts unselectable">Contacts</h4>
                         <ul className="panelText contacts">
-                            <li>Phone: <span>732-365-5505</span></li>
-                            <li>Fax:   <span>732-365-2313</span></li>
-                            <li>Email: <span>office@clocky45.com</span></li>
+                            <li><div className="unselectable">Phone:&nbsp;</div><span>732-365-5505</span></li>
+                            <li><div className="unselectable">Fax:&nbsp;</div><span>732-365-2313</span></li>
+                            <li><div className="unselectable">Email:&nbsp;</div><span>office@clocky45.com</span></li>
                         </ul>
                     </div>
                     <div className="panel address">
-                        <h4 className="panelTitle address">Address</h4>
+                        <h4 className="panelTitle address unselectable">Address</h4>
                         <ul className="panelText address">
                             <li>Clokcy45</li>
                             <li>1985 Cedar Bridge Ave.,</li>

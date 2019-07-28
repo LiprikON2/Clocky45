@@ -20,7 +20,8 @@
     }
 
     .logo {
-        margin-left: 15px;
+        padding-left: 15px;
+        /* margin-left: 15px; */
     }
     .logo-img {
         transform: unset;

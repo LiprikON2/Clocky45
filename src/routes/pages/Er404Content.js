@@ -4,29 +4,8 @@ import { withRouter } from 'react-router-dom'
 class Content extends React.Component {
 
     goBack = () => {
-        // const currPath = this.props.history.location.pathname
-        // console.log(currPath);
-        this.props.history.goBack()
-        // setTimeout((params) => {
-            
-            // this.props.history.push(currPath);
-        // }, 10000
-        // )
-
-        
-    }
-
-    handleHover = (e) => {
-        // animation for icon inside back button
-        // if (e.type === 'mouseover') {
-        //     this.props.anims.applyAnimation('.fas.fa-chevron-circle-left', 'slideOutLeftIN')
-
-        // } else {
-        //     console.log(e.type);
-        //     this.props.anims.applyAnimation('.fas.fa-chevron-circle-left', 'slideOutLeftOUT')
-        // }
-    }
-    
+        this.props.history.push('/');
+    }   
     
     render() {
         return (

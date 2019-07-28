@@ -93,9 +93,9 @@ export default class Content extends React.Component {
                         <div className="timer-wrapper">
                             <div className="popup timer unselectable">Copied!</div>
                             <Clock
-                                className="clock timer unselectable" 
-                                ticking={true} 
-                                format="HH:mm:ss" 
+                                className="clock timer unselectable"
+                                ticking={true}
+                                format="HH:mm:ss"
                                 onClick={this.handleClick}
                             />
                         </div>

@@ -165,13 +165,7 @@ https://stackoverflow.com/questions/21312707/show-full-site-button-to-bypass-css
     -o-user-select:none;
     user-select:none;
 }
-li span {
-    -webkit-user-select: all;
-    -moz-user-select: all;
-    -ms-user-select: all;
-    -o-user-select: all;
-    user-select: all;
-}
+
 
 
 /* BODY */
@@ -219,12 +213,12 @@ html, body, #root {
 .logo {
     display: flex;
     align-items: center;
-    margin-left: 36px;
+    padding-left: 36px;
     text-decoration: none;
+    background-color: #fec00f;
 }
-.logo:hover .logo-img, .logo:hover .logo-name {
+.logo:active {
     filter: brightness(85%);
-    /* background-color: yellowgreen; */
 }
 .logo-img {
     width: 100px;
@@ -433,6 +427,17 @@ html, body, #root {
         "panelTextContacts"
         "panelTextContacts"
         "panelTextContacts";
+}
+.contacts li span {
+    -webkit-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all;
+    -o-user-select: all;
+    user-select: all;
+}
+.contacts li div {
+    color:whitesmoke;
+    display: inline-block;
 }
 .panel.address {
     display: grid;
