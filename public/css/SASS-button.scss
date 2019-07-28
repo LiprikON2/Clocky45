@@ -34,6 +34,7 @@ $yellow: #fec00f;
     width: 305px;
     height: 72px;
     background-color: #191919;
+    overflow:hidden;
 
     @include transition(all 0.5s ease);
 }
@@ -41,7 +42,6 @@ $yellow: #fec00f;
 // ################ FOUR
 
 .er404-btn {
-    overflow:hidden;
 	
 	span {
         color:$yellow;

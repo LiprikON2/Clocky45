@@ -9,15 +9,12 @@
   width: 305px;
   height: 72px;
   background-color: #191919;
+  overflow: hidden;
   transition: all 0.5s ease, background-color 0.2s;
   -webkit-transition: all 0.5s ease, background-color 0.2s;
   -moz-transition: all 0.5s ease, background-color 0.2s;
   -o-transition: all 0.5s ease, background-color 0.2s;
   -ms-transition: all 0.5s ease, background-color 0.2s;
-}
-
-.er404-btn {
-  overflow: hidden;
 }
 
 .er404-btn span {
