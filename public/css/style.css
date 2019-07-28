@@ -120,14 +120,14 @@ https://stackoverflow.com/questions/21312707/show-full-site-button-to-bypass-css
 /* TOPNAV BUTTON */
 .button {
     outline-style: none;
-    font-size: 40px;
+    /* font-size: 40px; */
     text-transform: uppercase;
     font-family: Gill Sans MT, Gill Sans, My Gill Sans, sans-serif;
     background-color: transparent;
     border: solid black;
     border-radius: 10px;
-    margin: 10px 0 10px 0;
-    padding: 2px 30px 0 30px;
+    /* margin: 10px 0 10px 0;
+    padding: 0 30px 0 30px; */
     cursor: pointer;
     text-decoration: none;
     color: black;
@@ -140,7 +140,7 @@ https://stackoverflow.com/questions/21312707/show-full-site-button-to-bypass-css
     /* transform: scale(0.9); */
     font-size: 36px;
     margin: 9px 10px 9px 10px;
-    padding: 2px 27px 0 27px;
+    padding: 1px 27px 0 27px;
 
 
     display: unset;

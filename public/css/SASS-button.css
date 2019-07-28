@@ -35,8 +35,8 @@
   left: -80px;
   top: -6px;
   color: black;
-  padding: 20px;
   background-color: #fec00f;
+  padding: 20px;
   transition: all 0.3s ease, background-color 0.2s;
   -webkit-transition: all 0.3s ease, background-color 0.2s;
   -moz-transition: all 0.3s ease, background-color 0.2s;

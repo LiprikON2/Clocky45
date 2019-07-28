@@ -34,7 +34,6 @@ $yellow: #fec00f;
     width: 305px;
     height: 72px;
     background-color: #191919;
-    // transform: unset;
 
     @include transition(all 0.5s ease);
 }
@@ -55,10 +54,13 @@ $yellow: #fec00f;
         position:absolute;
 		left:-80px; 
 		top:-6px;
-		color:black;
+        color:black;
+        background-color: $yellow;
         padding:20px;
-		background-color:$yellow;
-		@include transition(all 0.3s ease);
+        // transform: translateZ(11px)
+        // box-shadow: 0 0 0 1px  $yellow;
+        @include transition(all 0.3s ease);
+
 	}
     
 	&:hover {
@@ -68,9 +70,7 @@ $yellow: #fec00f;
 		span {
             color:$yellow;
 			margin-left:80px;
-            // color:black;
         }
-        // background-color: $yellow;
     }
     &:focus {
         span {
