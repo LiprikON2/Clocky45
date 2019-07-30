@@ -105,10 +105,8 @@ export default class Content extends React.Component {
                     alt="Hand with a clock" 
                     className="hand-img"
                     onClick={this.handleClick}               
-                    />
+                />
             </section>
         )
     }
 }
-
-//  && this.handImg.current.disabled

@@ -306,9 +306,10 @@ html, body, #root {
     cursor: pointer;
     text-align: center;
 }
-.timer:not(:root:root) { 
+/* SAFARI only*/
+/* .timer:not(:root:root) { 
     padding-top: 15px;
-}
+} */
 .timer:active {
     filter: brightness(85%);
 }
