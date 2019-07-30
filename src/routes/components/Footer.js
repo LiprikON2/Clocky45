@@ -6,7 +6,8 @@ export default class Content extends React.Component {
     state = {
         isCreditsOpen: false,
         width: 0,
-        heigth: 0
+        heigth: 0,
+        // isGoMobileAdded: ,
     }
     componentDidMount() {
         this.updateWindowDimensions();
@@ -24,14 +25,13 @@ export default class Content extends React.Component {
 
     openCredits = () => {
         const isGoMobileAdded = document.querySelector('.mobile').style.display === "unset" ? true : false
-        console.log("TCL: Content -> openCredits -> isGoMobileAdded", isGoMobileAdded)
 
         document.querySelector('.credits').style.height = isGoMobileAdded ? "8em" : "6.8em"
         document.querySelector('.panelsContainer').style.height = isGoMobileAdded ? "8em" : "6.8em"
         document.querySelector('.inc').style.display = "none"
         document.querySelector('.closeCredits').style.display = "unset"
 
-        this.formateCreditsDetails(true)
+        this.formateCreditsDetails('open')
         this.setState({
             isCreditsOpen: true
         })
@@ -42,15 +42,15 @@ export default class Content extends React.Component {
         document.querySelector('.inc').style.display = "unset"
         document.querySelector('.closeCredits').style.display = "none"
 
-        this.formateCreditsDetails(false)
+        this.formateCreditsDetails('close')
         this.setState({
             isCreditsOpen: false
         })
     }
 
     // Formate details size according to viewpoint
-    formateCreditsDetails = (toOpen) => {
-        if (toOpen) { 
+    formateCreditsDetails = (operation) => {
+        if (operation === 'open') { 
             if (this.state.width >= 1025) {
                 this.setState({creditsStyle: {gridTemplateAreas: `
                     '. panelsContainer panelsContainer .'
@@ -68,7 +68,7 @@ export default class Content extends React.Component {
                     'panelsContainer panelsContainer panelsContainer panelsContainer'
                 `}})
             }
-        } else {
+        } else if (operation === 'close') {
             if (this.state.width >= 1025) {
                 this.setState({creditsStyle: {gridTemplateAreas: `
                     "inc inc inc inc"

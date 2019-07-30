@@ -97,7 +97,7 @@ export default class Content extends React.Component {
                                 ticking={true}
                                 format="HH:mm:ss"
                                 onClick={this.handleClick}
-                            />
+                            />   
                         </div>
                     <br/>
                 </h6>
