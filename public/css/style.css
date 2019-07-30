@@ -283,6 +283,7 @@ html, body, #root {
 .timer-wrapper {
     position: relative;
     display: inline-block;
+    background-color: #fec00f;
     /* margin-left: auto; */
     /* margin-right: auto; */
     /* height: auto; */
