@@ -69,7 +69,7 @@
     .timer-wrapper {
     }
     .popup {
-        
+        height: 100%;
     }
     
     
@@ -78,6 +78,7 @@
         padding: auto 10px auto 10px;
         /* padding-top: 15px; */
         font-size: 135px;
+        height: 100%;
     }
 
     .hand-img {
