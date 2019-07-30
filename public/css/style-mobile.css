@@ -67,9 +67,12 @@
         grid-row: 2 / 6;
     }
     .timer-wrapper {
+        /* background-color: #fec00f; */
+        border-radius: 10px;
+        /* transform: translateY(10px) */
     }
     .popup {
-        height: 100%;
+        background-position: center;
     }
     
     
@@ -78,7 +81,7 @@
         padding: auto 10px auto 10px;
         /* padding-top: 15px; */
         font-size: 135px;
-        height: 100%;
+        background-position: center;
     }
 
     .hand-img {
