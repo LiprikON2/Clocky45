@@ -305,9 +305,10 @@ html, body, #root {
     padding: 0 10px 0 10px;
     cursor: pointer;
     text-align: center;
-    line-height: 163px;
 }
-
+.timer:not(:root:root) { 
+    padding-top: 15px;
+}
 .timer:active {
     filter: brightness(85%);
 }
