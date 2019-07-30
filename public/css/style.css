@@ -278,16 +278,25 @@ html, body, #root {
     justify-self: unset;
     cursor: pointer;        
 }
+
+
+.timer-wrapper {
+    position: relative;
+    display: inline-block;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* height: auto; */
+}
 .popup {
     position: absolute;
-    width: 343px;
+    width: 100%;
     transition: opacity 0.5s;
     visibility: hidden;
     opacity: 0;
 }
 
 .timer {
-    display: inline;
+    /* display: inline; */
     font-family: Calibri, sans-serif;
     font-size: 90px;
     color: black;

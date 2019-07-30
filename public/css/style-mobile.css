@@ -66,6 +66,7 @@
         grid-column: 2 / -2;
         grid-row: 2 / 6;
     }
+    /*
     .timer-wrapper {
         display: grid;
     }
@@ -77,13 +78,15 @@
         height: 179px;
         width: 503px;
     }
+    */
     
     .timer {
         justify-self: center;
-        padding: 15px 10px 0 10px;
+        padding: 0px 10px 0 10px;
+        /* padding-top: 15px; */
         font-size: 135px;
-        width: 503px;
-        height: 179px;
+        /* width: 503px; */
+        /* height: 179px; */
     }
 
     .hand-img {
@@ -257,8 +260,8 @@
         }
 
         .popup {
-            top: 652px;
-            left: 464px;
+            /* top: 652px; */
+            /* left: 464px; */
         }
         .timer {
             font-size: 120px; /* -15px compared to portrait*/

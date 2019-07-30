@@ -99,7 +99,6 @@ export default class Content extends React.Component {
                                 onClick={this.handleClick}
                             />   
                         </div>
-                    <br/>
                 </h6>
                 <img
                     src="css/img/custom-hand.png" 
