@@ -66,27 +66,18 @@
         grid-column: 2 / -2;
         grid-row: 2 / 6;
     }
-    /*
     .timer-wrapper {
-        display: grid;
     }
-
     .popup {
-        justify-self: center;
-        position: absolute;
-        top: 636px;
-        height: 179px;
-        width: 503px;
+        
     }
-    */
+    
     
     .timer {
         justify-self: center;
         padding: 0px 10px 0 10px;
         /* padding-top: 15px; */
         font-size: 135px;
-        /* width: 503px; */
-        /* height: 179px; */
     }
 
     .hand-img {

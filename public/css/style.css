@@ -289,6 +289,7 @@ html, body, #root {
 }
 .popup {
     position: absolute;
+    /* height: 100%; */
     width: 100%;
     transition: opacity 0.5s;
     visibility: hidden;
@@ -296,7 +297,6 @@ html, body, #root {
 }
 
 .timer {
-    /* display: inline; */
     font-family: Calibri, sans-serif;
     font-size: 90px;
     color: black;
@@ -304,6 +304,8 @@ html, body, #root {
     border-radius: 10px;
     padding: 0 10px 0 10px;
     cursor: pointer;
+    text-align: center;
+    line-height: 163px;
 }
 
 .timer:active {
