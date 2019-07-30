@@ -75,7 +75,7 @@
     
     .timer {
         justify-self: center;
-        padding: 0px 10px 0 10px;
+        padding: auto 10px auto 10px;
         /* padding-top: 15px; */
         font-size: 135px;
     }
