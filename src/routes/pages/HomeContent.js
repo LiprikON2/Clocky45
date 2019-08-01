@@ -106,6 +106,7 @@ export default class Content extends React.Component {
                     className="hand-img"
                     onClick={this.handleClick}               
                 />
+                <div id="copyNode"></div>
             </section>
         )
     }
